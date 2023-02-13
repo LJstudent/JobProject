@@ -1,4 +1,4 @@
-import { Box, Center, Divider, Flex, Heading, Stack, Text } from "native-base";
+import { Box, Button, Center, Divider, Flex, Heading, Stack, Text } from "native-base";
 import * as React from 'react';
 
 export default function CompaniesList() {
@@ -40,6 +40,21 @@ export default function CompaniesList() {
                                     <Text>Location</Text>
                                 </Stack>
                             </Flex>
+                        </Stack>
+                        <Divider my="2" thickness="1" orientation="horizontal" />
+                        <Stack direction="row">
+                            <Stack direction="row" space={0.5}>
+                                <Button w="100px" rounded="full" disabled>React</Button>
+                                <Button w="100px" rounded="full" disabled>Typescript</Button>
+                                <Button w="100px" rounded="full" disabled>Redux</Button>
+                                <Button w="50px" rounded="full" disabled>+6</Button>
+                            </Stack>
+                            <Stack direction="row" space={1} flex="1" justifyContent="flex-end">
+                                <Button w="40px" disabled>1</Button>
+                                <Button w="40px" disabled>2</Button>
+                                <Button w="40px" disabled>3</Button>
+                                <Button w="40px" disabled>+2</Button>
+                            </Stack>
                         </Stack>
                     </Box>
                 </Box>
