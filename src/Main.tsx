@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff'
     },
     indicator: {
-        backgroundColor: '#00BCD4',
+        backgroundColor: '#8b5cf6',
     },
     label: {
         fontWeight: '400',

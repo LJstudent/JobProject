@@ -1,11 +1,13 @@
-import { Box, Button, Center, Divider, Flex, Heading, Stack, Text } from "native-base";
+import { Box, Button, Center, Divider, Flex, Heading, IconButton, Stack, Text } from "native-base";
 import * as React from 'react';
+import { AntDesign } from "@expo/vector-icons";
+import { MaterialIcons } from '@expo/vector-icons';
 
 export default function CompaniesList() {
     return (
         <Center flex={1} my="4">
             <Box w="30%" h="40%" position="relative">
-                <Box w="100%" h="100%" mt="10" overflow="hidden" rounded="3xl" backgroundColor="amber.100" position="absolute">
+                <Box w="100%" h="100%" mt="10" overflow="hidden" rounded="3xl" borderColor="coolGray.200" borderWidth="1" shadow={3} backgroundColor="white" position="absolute">
                     <Stack space={1} mt="10" ml="5" textAlign="center">
                         <Heading size="xl">
                             MARS
@@ -15,7 +17,7 @@ export default function CompaniesList() {
                         }} _dark={{
                             color: "violet.400"
                         }} fontWeight="500">
-                            Milkway Galaxy
+                            Front-end developer
                         </Text>
                     </Stack>
                     <Box mt="12" mx="10" textAlign="center">
@@ -44,16 +46,28 @@ export default function CompaniesList() {
                         <Divider my="2" thickness="1" orientation="horizontal" />
                         <Stack direction="row">
                             <Stack direction="row" space={0.5}>
-                                <Button w="100px" rounded="full" disabled>React</Button>
-                                <Button w="100px" rounded="full" disabled>Typescript</Button>
-                                <Button w="100px" rounded="full" disabled>Redux</Button>
-                                <Button w="50px" rounded="full" disabled>+6</Button>
+                                <Button w="100px" rounded="full" disabled backgroundColor="violet.500">React</Button>
+                                <Button w="100px" rounded="full" disabled backgroundColor="violet.500">Typescript</Button>
+                                <Button w="100px" rounded="full" disabled backgroundColor="violet.500">Redux</Button>
+                                <Button w="50px" rounded="full" disabled backgroundColor="violet.500">+6</Button>
                             </Stack>
                             <Stack direction="row" space={1} flex="1" justifyContent="flex-end">
-                                <Button w="40px" disabled>1</Button>
-                                <Button w="40px" disabled>2</Button>
-                                <Button w="40px" disabled>3</Button>
-                                <Button w="40px" disabled>+2</Button>
+                                <IconButton disabled backgroundColor="white" variant="solid" shadow={3} _icon={{
+                                    as: AntDesign,
+                                    name: "car",
+                                    color: "coolGray.500"
+                                }} />
+                                <IconButton disabled backgroundColor="white" variant="solid" shadow={3} _icon={{
+                                    as: MaterialIcons,
+                                    name: "fitness-center",
+                                    color: "coolGray.500"
+                                }} />
+                                <IconButton disabled backgroundColor="white" variant="solid" shadow={3} _icon={{
+                                    as: AntDesign,
+                                    name: "areachart",
+                                    color: "coolGray.500",
+                                }} />
+                                <Button w="40px" backgroundColor="white" disabled shadow={3} _text={{ color: "coolGray.500" }}>+2</Button>
                             </Stack>
                         </Stack>
                     </Box>
