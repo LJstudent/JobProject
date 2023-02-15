@@ -14,8 +14,8 @@ export default function CompaniesList() {
                 xl: "800px",
             }}
                 h={{
-                    base: "620px",
-                    sm: "375px",
+                    base: "450px",
+                    sm: "410px",
                     md: "350px",
                     lg: "350px",
                     xl: "350px",
@@ -46,7 +46,7 @@ export default function CompaniesList() {
                         </Text>
                     </Stack>
                     <Box mt={{
-                        base: "8",
+                        base: "6",
                         sm: "12",
                     }} mx="10" textAlign="center">
                         <Stack space={1} >
@@ -54,7 +54,7 @@ export default function CompaniesList() {
                                 Explore stange places on Mars and experience the great time in your life time
                             </Text>
                             <Flex mt={{
-                                base: "2",
+                                base: "-4",
                                 sm: "2",
                                 md: "5",
                                 lg: "5",
@@ -83,7 +83,7 @@ export default function CompaniesList() {
                                 </Stack>
                                 <Divider display={{ base: 'none', sm: undefined }} h="6" alignSelf="center" thickness="2" mx={{
                                     base: "2",
-                                    sm: "8",
+                                    sm: "6",
                                     md: "10",
                                     lg: "10",
                                     xl: "10",
@@ -103,7 +103,7 @@ export default function CompaniesList() {
                                 </Stack>
                                 <Divider display={{ base: 'none', sm: undefined }} h="6" alignSelf="center" thickness="2" mx={{
                                     base: "2",
-                                    sm: "8",
+                                    sm: "6",
                                     md: "10",
                                     lg: "10",
                                     xl: "10",
@@ -122,7 +122,7 @@ export default function CompaniesList() {
                                 </Stack>
                                 <Divider display={{ base: 'none', sm: undefined }} h="6" alignSelf="center" thickness="2" mx={{
                                     base: "2",
-                                    sm: "8",
+                                    sm: "6",
                                     md: "10",
                                     lg: "10",
                                     xl: "10",
@@ -143,14 +143,14 @@ export default function CompaniesList() {
                             </Flex>
                         </Stack>
                         <Divider my="2" thickness="1" orientation="horizontal" />
-                        <Stack direction="row">
-                            <Flex w={"100%"} backgroundColor='amber.100' direction="row" flexWrap={'wrap'}>
-                                <Button mr={{base: 1, sm: 2}} w={{base: undefined, sm: '100px', md: '100px' }} rounded="full" disabled backgroundColor="violet.500">React</Button>
-                                <Button mr={{base: 1, sm: 2}} w={{base: undefined, sm: '100px', md: '100px' }} rounded="full" size={"sm"} disabled backgroundColor="violet.500">Typescript</Button>
-                                <Button mr={{base: 1, sm: 2}} w={{base: undefined, sm: '100px', md: '100px' }} rounded="full" disabled backgroundColor="violet.500">Redux</Button>
-                                <Button mr={{base: 1, sm: 2}} w={{base: undefined, sm: '100px', md: '50px' }} rounded="full" disabled backgroundColor="violet.500">+6</Button>
+                        <Stack direction={{ base: "column", sm: "column", md: "row" }}>
+                            <Flex w={"100%"} direction="row" flexWrap={'wrap'}>
+                                <Button mr={{ base: 1, sm: 2 }} w={{ base: undefined, sm: '100px', md: '100px' }} rounded="full" disabled backgroundColor="violet.500">React</Button>
+                                <Button mr={{ base: 1, sm: 2 }} w={{ base: undefined, sm: '100px', md: '100px' }} rounded="full" size={"sm"} disabled backgroundColor="violet.500">Typescript</Button>
+                                <Button mr={{ base: 1, sm: 2 }} w={{ base: undefined, sm: '100px', md: '100px' }} rounded="full" disabled backgroundColor="violet.500">Redux</Button>
+                                <Button mr={{ base: 1, sm: 2 }} w={{ base: undefined, sm: '100px', md: '50px' }} rounded="full" disabled backgroundColor="violet.500">+6</Button>
                             </Flex>
-                            {/* <Stack direction="row" space={1} flex="1" justifyContent="flex-end">
+                            <Stack direction="row" space={1} mt={{ base: 2, sm: 2 , md: undefined }} flex="1" justifyContent={{ base: undefined, sm: undefined, md: "flex-end" }}>
                                 <IconButton disabled backgroundColor="white" variant="solid" shadow={3} _icon={{
                                     as: AntDesign,
                                     name: "car",
@@ -167,14 +167,14 @@ export default function CompaniesList() {
                                     color: "coolGray.500",
                                 }} />
                                 <Button w="40px" backgroundColor="white" disabled shadow={3} _text={{ color: "coolGray.500" }}>+2</Button>
-                            </Stack> */}
+                            </Stack>
                         </Stack>
                     </Box>
                 </Box>
                 <Box w="30%"
                     h={{
-                        base: "35%",
-                        sm: "50%",
+                        base: "125px",
+                        sm: "40%",
                         md: "50%",
                         lg: "50%",
                         xl: "50%",

@@ -8,7 +8,7 @@ export default function App() {
   const theme = extendTheme({
   breakpoints: {
     base: 0,
-    sm: 640,
+    sm: 630,
     md: 868,
     lg: 1280,
     xl: 1800,
