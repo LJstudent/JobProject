@@ -150,7 +150,7 @@ export default function CompaniesList() {
                                 <Button mr={{ base: 1, sm: 2 }} w={{ base: undefined, sm: '100px', md: '100px' }} rounded="full" disabled backgroundColor="violet.500">Redux</Button>
                                 <Button mr={{ base: 1, sm: 2 }} w={{ base: undefined, sm: '100px', md: '50px' }} rounded="full" disabled backgroundColor="violet.500">+6</Button>
                             </Flex>
-                            <Stack direction="row" space={1} mt={{ base: 2, sm: 2 , md: undefined }} flex="1" justifyContent={{ base: undefined, sm: undefined, md: "flex-end" }}>
+                            <Stack direction="row" space={1} mt={{ base: 2, sm: 2, md: undefined }} flex="1" justifyContent={{ base: undefined, sm: undefined, md: "flex-end" }}>
                                 <IconButton disabled backgroundColor="white" variant="solid" shadow={3} _icon={{
                                     as: AntDesign,
                                     name: "car",
