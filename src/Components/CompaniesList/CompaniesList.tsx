@@ -9,7 +9,7 @@ export default function CompaniesList() {
             <Center>
                 <Box my="10" w={{
                     base: "95%",
-                    sm: "90%",
+                    sm: "80%",
                     md: "800px",
                     lg: "800px",
                     xl: "800px",
@@ -49,9 +49,6 @@ export default function CompaniesList() {
                                     flexWrap={{
                                         base: "wrap",
                                         sm: undefined,
-                                        md: undefined,
-                                        lg: undefined,
-                                        xl: undefined,
                                     }}
                                     justifyContent="center">
                                     <Stack mx={{
@@ -68,7 +65,7 @@ export default function CompaniesList() {
                                     </Stack>
                                     <Divider display={{ base: 'none', sm: undefined }} h="6" alignSelf="center" thickness="2" mx={{
                                         base: "2",
-                                        sm: "6",
+                                        sm: "4",
                                         md: "10",
                                         lg: "10",
                                         xl: "10",
@@ -88,7 +85,7 @@ export default function CompaniesList() {
                                     </Stack>
                                     <Divider display={{ base: 'none', sm: undefined }} h="6" alignSelf="center" thickness="2" mx={{
                                         base: "2",
-                                        sm: "6",
+                                        sm: "4",
                                         md: "10",
                                         lg: "10",
                                         xl: "10",
@@ -107,7 +104,7 @@ export default function CompaniesList() {
                                     </Stack>
                                     <Divider display={{ base: 'none', sm: undefined }} h="6" alignSelf="center" thickness="2" mx={{
                                         base: "2",
-                                        sm: "6",
+                                        sm: "4",
                                         md: "10",
                                         lg: "10",
                                         xl: "10",
@@ -128,7 +125,7 @@ export default function CompaniesList() {
                                 </Flex>
                             </Stack>
                             <Divider mt="2" thickness="1" orientation="horizontal" />
-                            <Stack direction={{ base: "column", sm: "column", md: "row" }}>
+                            <Stack mb={{base: 2, sm: undefined}} direction={{ base: "column", sm: "column", md: "row" }}>
                                 <Flex w={"100%"} direction="row" flexWrap={'wrap'}>
                                     <Button mr={{ base: 1, sm: 2 }} mt={{ base: 1, sm: 2 }} rounded="full" disabled backgroundColor="violet.500">React</Button>
                                     <Button mr={{ base: 1, sm: 2 }} mt={{ base: 1, sm: 2 }} rounded="full" size={"sm"} disabled backgroundColor="violet.500">Typescript</Button>
