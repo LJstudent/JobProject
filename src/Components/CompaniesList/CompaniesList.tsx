@@ -5,8 +5,8 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 export default function CompaniesList() {
     return (
-            <Stack direction={"column"}>
-                <Center>
+        <Stack direction={"column"}>
+            <Center>
                 <Box my="10" w={{
                     base: "95%",
                     sm: "90%",
@@ -14,7 +14,7 @@ export default function CompaniesList() {
                     lg: "800px",
                     xl: "800px",
                 }}>
-                    <Box p={5} mt="10" overflow="hidden" rounded="3xl" borderColor="coolGray.200" borderWidth="1" shadow={3} backgroundColor="white" position="absolute">
+                    <Box p={{ base: 2, sm: 5 }} mt="10" overflow="hidden" rounded="3xl" borderColor="coolGray.200" borderWidth="1" shadow={3} backgroundColor="white" position="absolute">
                         <Stack space={1} mt={{
                             base: "5",
                             sm: "10",
@@ -22,7 +22,7 @@ export default function CompaniesList() {
                             lg: "10",
                             xl: "10",
                         }} ml={{
-                            base: "16",
+                            base: "24",
                             sm: undefined,
                         }} textAlign="center">
                             <Heading size="xl">
@@ -156,7 +156,11 @@ export default function CompaniesList() {
                             </Stack>
                         </Box>
                     </Box>
-                    <Box w="150px"
+                    <Box
+                        w={{
+                            base: "115px",
+                            sm: "150px"
+                        }}
                         h={'125px'} rounded="lg" ml={{
                             base: "5",
                             sm: "8",
@@ -176,7 +180,7 @@ export default function CompaniesList() {
                         }}>
                     </Box>
                 </Box>
-                </Center>
-            </Stack>
+            </Center>
+        </Stack>
     )
 } 
