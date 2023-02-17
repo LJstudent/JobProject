@@ -1,4 +1,5 @@
-import { Center, Text } from 'native-base';
+import CompaniesInfo from './Components/CompaniesInfo/CompaniesInfo';
+import { Text } from 'native-base';
 import * as React from 'react';
 import { Dimensions, StatusBar, StyleSheet } from 'react-native';
 import { NavigationState, SceneMap, SceneRendererProps, TabBar, TabView } from 'react-native-tab-view';
@@ -8,10 +9,6 @@ type State = NavigationState<{
     key: string;
     title: string;
 }>;
-
-const SecondRoute = () => <Center flex={1} my="4">
-    This is Tab 2
-</Center>;
 
 export default function Main() {
     const [index, setIndex] = React.useState(0);
@@ -41,8 +38,8 @@ export default function Main() {
                 routes
             }}
             renderScene={SceneMap({
-                first: CompaniesList,
-                second: SecondRoute,
+                first: CompaniesInfo,
+                second: CompaniesList,
             })}
             renderTabBar={renderTabBar}
             onIndexChange={setIndex}
