@@ -1,7 +1,6 @@
-import { Box, Heading, IconButton, ScrollView, Stack, Text } from 'native-base';
+import { Box, Flex, Heading, IconButton, ScrollView, Stack, Text } from 'native-base';
 import * as React from 'react';
-import { Feather } from '@expo/vector-icons';
-import { AntDesign } from '@expo/vector-icons';
+import { Feather, FontAwesome, AntDesign, SimpleLineIcons, MaterialIcons } from '@expo/vector-icons';
 
 export default function CompaniesInfo() {
     return (
@@ -36,8 +35,9 @@ export default function CompaniesInfo() {
                         <br></br><br></br>
                         We are looking for a frontend engineer that can help take our merchant onboarding experience through hosted pages to the next level. Additionally you might be involved with building shared frontend components and libraries that will allow us to efficiently operate our suite of embedded financial services.
                     </Text>
-                    <Box mt={5}>
-                        <Stack mt={{base: 2, xl: 1}} direction="row">
+
+                    <Box>
+                        <Stack mt={10} direction="row">
                             <IconButton disabled variant="ghost" width={20} ml="-8" _icon={{
                                 as: Feather,
                                 name: "user",
@@ -45,7 +45,7 @@ export default function CompaniesInfo() {
                             }} />
                             <Heading ml="-4" alignSelf="center" size={'sm'}>What you’ll do</Heading>
                         </Stack>
-                        <Stack mt={{base: 2, xl: 1}} direction="row">
+                        <Stack mt={{ base: 2, xl: 1 }} direction="row">
                             <IconButton disabled variant="ghost" width={20} ml="-8" _icon={{
                                 as: AntDesign,
                                 name: "check",
@@ -53,7 +53,7 @@ export default function CompaniesInfo() {
                             }} />
                             <Text ml="-4" alignSelf="center" fontSize={'md'}>You will be part of one of our many multidisciplinary streams, creating or enhancing the user interface for both internal users and our merchants.</Text>
                         </Stack>
-                        <Stack mt={{base: 2, xl: 1}} direction="row">
+                        <Stack mt={{ base: 2, xl: 1 }} direction="row">
                             <IconButton disabled variant="ghost" width={20} ml="-8" _icon={{
                                 as: AntDesign,
                                 name: "check",
@@ -61,7 +61,7 @@ export default function CompaniesInfo() {
                             }} />
                             <Text ml="-4" alignSelf="center" fontSize={'md'}>You will be responsible for the full life cycle of your developments. This includes communicating with stakeholders (product owners, product designers, account managers, merchants e.g.), testing, iterating purposefully, and monitoring the impact of your projects.</Text>
                         </Stack>
-                        <Stack mt={{base: 2, xl: 1}} direction="row">
+                        <Stack mt={{ base: 2, xl: 1 }} direction="row">
                             <IconButton disabled variant="ghost" width={20} ml="-8" _icon={{
                                 as: AntDesign,
                                 name: "check",
@@ -69,7 +69,7 @@ export default function CompaniesInfo() {
                             }} />
                             <Text ml="-4" alignSelf="center" fontSize={'md'}>You will have the freedom to identify and improve parts of the platform to make it more consistent, robust and scalable.</Text>
                         </Stack>
-                        <Stack mt={{base: 2, xl: 1}} direction="row">
+                        <Stack mt={{ base: 2, xl: 1 }} direction="row">
                             <IconButton disabled variant="ghost" width={20} ml="-8" _icon={{
                                 as: AntDesign,
                                 name: "check",
@@ -78,7 +78,129 @@ export default function CompaniesInfo() {
                             <Text ml="-4" alignSelf="center" fontSize={'md'}>There are Frontend developers in many teams and keeping in sync with this group is important for maintaining our scalability. You will collaborate across streams and time zones to make things happen</Text>
                         </Stack>
                     </Box>
-                    <p>Trefwoorden code welke talen, trophy hoeveel jaar werkervaring, team users(feather) kan, extra like , target, school graduationcap</p>
+
+                    <Box>
+                        <Heading mt={10} size={'sm'}>Who you are</Heading>
+                        <Flex mt={2} direction={'row'} flexWrap={"wrap"}>
+                            <Stack w={'20%'} mr={5}>
+                                <Stack direction={'row'}>
+                                    <IconButton disabled variant="ghost" justifyContent={'flex-start'} pl={0} _icon={{
+                                        as: FontAwesome,
+                                        name: "code",
+                                        color: "violet.500"
+                                    }} />
+                                    <Heading alignSelf="center" size={"sm"} color={'violet.500'} fontWeight='medium'>Code</Heading>
+                                </Stack>
+                                <Text fontSize={'md'}>React, SQL, Redux, Typescript, Jest and Enzyme</Text>
+                            </Stack>
+                            <Stack w={'15%'} mr={5}>
+                                <Stack direction={'row'}>
+                                    <IconButton disabled variant="ghost" justifyContent={'flex-start'} pl={0} _icon={{
+                                        as: SimpleLineIcons,
+                                        name: "trophy",
+                                        color: "violet.500"
+                                    }} />
+                                    <Heading alignSelf="center" size={"sm"} color={'violet.500'} fontWeight='medium'>Work experience</Heading>
+                                </Stack>
+                                <Text fontSize={'md'}>0-2 years</Text>
+                            </Stack>
+                            <Stack w={'20%'} mr={5}>
+                                <Stack direction={'row'}>
+                                    <IconButton disabled variant="ghost" justifyContent={'flex-start'} pl={0} _icon={{
+                                        as: Feather,
+                                        name: "users",
+                                        color: "violet.500"
+                                    }} />
+                                    <Heading alignSelf="center" size={"sm"} color={'violet.500'} fontWeight='medium'>Team effort</Heading>
+                                </Stack>
+                                <Text fontSize={'md'}>You are interested in growing the team with us and mentor new joiners</Text>
+                            </Stack>
+                            <Stack w={'20%'} mr={5}>
+                                <Stack direction={'row'}>
+                                    <IconButton disabled variant="ghost" justifyContent={'flex-start'} pl={0} _icon={{
+                                        as: Feather,
+                                        name: "target",
+                                        color: "violet.500"
+                                    }} />
+                                    <Heading alignSelf="center" size={"sm"} color={'violet.500'} fontWeight='medium'>Target</Heading>
+                                </Stack>
+                                <Text fontSize={'md'}>You always trying to make it work while keeping the bigger picture in mind.</Text>
+                            </Stack>
+                            <Stack w={'20%'} mr={5}>
+                                <Stack direction={'row'}>
+                                    <IconButton disabled variant="ghost" justifyContent={'flex-start'} pl={0} _icon={{
+                                        as: AntDesign,
+                                        name: "like2",
+                                        color: "violet.500"
+                                    }} />
+                                    <Heading alignSelf="center" size={"sm"} color={'violet.500'} fontWeight='medium'>Like</Heading>
+                                </Stack>
+                                <Text fontSize={'md'}>You actively share your knowledge and enthusiasm to develop yourself and your team.</Text>
+                            </Stack>
+                            <Stack w={'20%'} mr={5}>
+                                <Stack direction={'row'}>
+                                    <IconButton disabled variant="ghost" justifyContent={'flex-start'} pl={0} _icon={{
+                                        as: FontAwesome,
+                                        name: "graduation-cap",
+                                        color: "violet.500"
+                                    }} />
+                                    <Heading alignSelf="center" size={"sm"} color={'violet.500'} fontWeight='medium'>Graduation</Heading>
+                                </Stack>
+                                <Text fontSize={'md'}>You have a BSc or MSc in Computer Science</Text>
+                            </Stack>
+                        </Flex>
+                    </Box>
+
+                    <Box>
+                        <Heading mt={10} size={'sm'}>Extra's</Heading>
+                        <Flex direction={'row'} flexWrap={"wrap"}>
+                            <Stack w={'20%'} mr={5} space={4} mt={2} textAlign="center">
+                                    <IconButton disabled mx={'auto'} rounded="lg" backgroundColor="white" variant="solid" shadow={5} _icon={{
+                                        as: AntDesign,
+                                        name: "car",
+                                        color: "violet.400",
+                                        size: 10
+                                    }} />
+                                <Text fontSize={'md'}>Tesla model 3</Text>
+                            </Stack>
+                            <Stack w={'20%'} mr={5} space={4} mt={2} textAlign="center">
+                                    <IconButton disabled mx={'auto'} rounded="lg" backgroundColor="white" variant="solid" shadow={5} _icon={{
+                                        as: MaterialIcons,
+                                        name: "fitness-center",
+                                        color: "violet.400",
+                                        size: 10
+                                    }} />
+                                <Text fontSize={'md'}>In house Gym</Text>
+                            </Stack>
+                            <Stack w={'20%'} mr={5} space={4} mt={2} textAlign="center">
+                                    <IconButton disabled mx={'auto'} rounded="lg" backgroundColor="white" variant="solid" shadow={5} _icon={{
+                                        as: AntDesign,
+                                        name: "areachart",
+                                        color: "violet.400",
+                                        size: 10
+                                    }} />
+                                <Text fontSize={'md'}>Annually growing salary</Text>
+                            </Stack>
+                            <Stack w={'20%'} mr={5} space={4} mt={2} textAlign="center">
+                                    <IconButton disabled mx={'auto'} rounded="lg" backgroundColor="white" variant="solid" shadow={5} _icon={{
+                                        as: AntDesign,
+                                        name: "rocket1",
+                                        color: "violet.400",
+                                        size: 10
+                                    }} />
+                                <Text fontSize={'md'}>Startup</Text>
+                            </Stack>
+                            <Stack w={'20%'} mr={5} space={4} mt={2} textAlign="center">
+                                    <IconButton disabled mx={'auto'} rounded="lg" backgroundColor="white" variant="solid" shadow={5} _icon={{
+                                        as: MaterialIcons,
+                                        name: "flight",
+                                        color: "violet.400",
+                                        size: 10
+                                    }} />
+                                <Text fontSize={'md'}>Possibility to work abroad</Text>
+                            </Stack>
+                        </Flex>
+                    </Box>
                 </Box>
             </ScrollView>
         </Box >
