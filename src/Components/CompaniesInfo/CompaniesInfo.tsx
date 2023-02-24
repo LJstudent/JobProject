@@ -4,19 +4,43 @@ import { Feather, FontAwesome, AntDesign, SimpleLineIcons, MaterialIcons, FontAw
 
 export default function CompaniesInfo() {
     return (
-        <Box w={'50%'} h={'100%'} backgroundColor={'white'} borderWidth={1} mx="auto">
+        <Box w={{
+            base: "100%",
+            sm: "90%",
+            md: "80%",
+            lg: "70%",
+            xl: "60%",
+        }} h={'100%'} backgroundColor={'white'} mx="auto">
             <ScrollView>
-                <Heading pl={12} pt={12} size="xl">
+                <Heading pl={{
+                    base: 6,
+                    sm: 12,
+                    md: 12,
+                    lg: 12,
+                    xl: 12,
+                }} pt={12} size="xl">
                     MARS
                 </Heading>
-                <Text pl={12} mt={1} fontSize="lg" _light={{
+                <Text pl={{
+                    base: 6,
+                    sm: 12,
+                    md: 12,
+                    lg: 12,
+                    xl: 12,
+                }} mt={1} fontSize="lg" _light={{
                     color: "violet.500"
                 }} _dark={{
                     color: "violet.400"
                 }} fontWeight="500">
                     Front-end developer
                 </Text>
-                <Box pl={12} mt={20} pr={4} backgroundColor={'blue.100'} paddingBottom={5} borderTopLeftRadius={'30px'} borderTopRightRadius={'30px'}>
+                <Box pl={{
+                    base: 6,
+                    sm: 12,
+                    md: 12,
+                    lg: 12,
+                    xl: 12,
+                }} mt={20} pr={4} backgroundColor={'white'} borderWidth={1} paddingBottom={5} borderTopLeftRadius={'30px'} borderTopRightRadius={'30px'}>
                     <Heading mb={5} mt={5} size="md">
                         This is Mars
                     </Heading>
@@ -82,7 +106,18 @@ export default function CompaniesInfo() {
                     <Box>
                         <Heading mt={10} size={'sm'}>Who you are</Heading>
                         <Flex mt={2} direction={'row'} flexWrap={"wrap"}>
-                            <Stack w={'20%'} mr={5}>
+                            <Stack
+                                w={{
+                                    base: '40%',
+                                    sm: '20%',
+                                    md: '20%',
+                                    lg: '20%',
+                                    xl: '20%',
+                                }} mr={5}
+                                mt={{
+                                    base: 3,
+                                    sm: 'none',
+                                }}>
                                 <Stack direction={'row'}>
                                     <IconButton disabled variant="ghost" justifyContent={'flex-start'} pl={0} _icon={{
                                         as: FontAwesome,
@@ -93,7 +128,11 @@ export default function CompaniesInfo() {
                                 </Stack>
                                 <Text mt={1} fontSize={'md'}>React, SQL, Redux, Typescript, Jest and Enzyme</Text>
                             </Stack>
-                            <Stack w={'15%'} mr={5}>
+                            <Stack w={'15%'} mr={5}
+                                mt={{
+                                    base: 3,
+                                    sm: 'none',
+                                }}>
                                 <Stack direction={'row'}>
                                     <IconButton disabled variant="ghost" justifyContent={'flex-start'} pl={0} _icon={{
                                         as: SimpleLineIcons,
@@ -104,7 +143,18 @@ export default function CompaniesInfo() {
                                 </Stack>
                                 <Text mt={1} fontSize={'md'}>0-2 years</Text>
                             </Stack>
-                            <Stack w={'20%'} mr={5}>
+                            <Stack
+                                w={{
+                                    base: '40%',
+                                    sm: '20%',
+                                    md: '20%',
+                                    lg: '20%',
+                                    xl: '20%',
+                                }}
+                                mt={{
+                                    base: 3,
+                                    sm: 'none',
+                                }} mr={5}>
                                 <Stack direction={'row'}>
                                     <IconButton disabled variant="ghost" justifyContent={'flex-start'} pl={0} _icon={{
                                         as: Feather,
@@ -115,7 +165,19 @@ export default function CompaniesInfo() {
                                 </Stack>
                                 <Text mt={1} fontSize={'md'}>You are interested in growing the team with us and mentor new joiners</Text>
                             </Stack>
-                            <Stack w={'20%'} mr={5}>
+                            <Stack
+                                w={{
+                                    base: '40%',
+                                    sm: '20%',
+                                    md: '20%',
+                                    lg: '20%',
+                                    xl: '20%',
+                                }}
+                                mt={{
+                                    base: 3,
+                                    sm: 'none',
+                                }}
+                                mr={5}>
                                 <Stack direction={'row'}>
                                     <IconButton disabled variant="ghost" justifyContent={'flex-start'} pl={0} _icon={{
                                         as: Feather,
@@ -126,7 +188,18 @@ export default function CompaniesInfo() {
                                 </Stack>
                                 <Text mt={1} fontSize={'md'}>You always trying to make it work while keeping the bigger picture in mind.</Text>
                             </Stack>
-                            <Stack w={'20%'} mr={5}>
+                            <Stack
+                                w={{
+                                    base: '40%',
+                                    sm: '20%',
+                                    md: '20%',
+                                    lg: '20%',
+                                    xl: '20%',
+                                }}
+                                mt={{
+                                    base: 3,
+                                    sm: 'none',
+                                }} mr={5}>
                                 <Stack direction={'row'}>
                                     <IconButton disabled variant="ghost" justifyContent={'flex-start'} pl={0} _icon={{
                                         as: AntDesign,
@@ -137,7 +210,19 @@ export default function CompaniesInfo() {
                                 </Stack>
                                 <Text mt={1} fontSize={'md'}>You actively share your knowledge and enthusiasm to develop yourself and your team.</Text>
                             </Stack>
-                            <Stack w={'20%'} mr={5}>
+                            <Stack
+                                w={{
+                                    base: '40%',
+                                    sm: '20%',
+                                    md: '20%',
+                                    lg: '20%',
+                                    xl: '20%',
+                                }}
+                                mt={{
+                                    base: 3,
+                                    sm: 'none',
+                                }}
+                                mr={5}>
                                 <Stack direction={'row'}>
                                     <IconButton disabled variant="ghost" justifyContent={'flex-start'} pl={0} _icon={{
                                         as: FontAwesome,
@@ -161,7 +246,18 @@ export default function CompaniesInfo() {
                             <Heading ml="-4" alignSelf="center" size={'sm'}>What we offer</Heading>
                         </Stack>
                         <Flex mt={2} direction={'row'} flexWrap={"wrap"}>
-                            <Stack w={'20%'} mr={5}>
+                            <Stack
+                                w={{
+                                    base: '40%',
+                                    sm: '20%',
+                                    md: '20%',
+                                    lg: '20%',
+                                    xl: '20%',
+                                }}
+                                mt={{
+                                    base: 3,
+                                    sm: 'none',
+                                }} mr={5}>
                                 <Stack direction={'row'}>
                                     <IconButton disabled variant="ghost" justifyContent={'flex-start'} pl={0} _icon={{
                                         as: FontAwesome,
@@ -172,7 +268,19 @@ export default function CompaniesInfo() {
                                 </Stack>
                                 <Text mt={1} fontSize={'md'}>10000-20000 euro each month</Text>
                             </Stack>
-                            <Stack w={'20%'} mr={5}>
+                            <Stack
+                                w={{
+                                    base: '40%',
+                                    sm: '20%',
+                                    md: '20%',
+                                    lg: '20%',
+                                    xl: '20%',
+                                }}
+                                mt={{
+                                    base: 3,
+                                    sm: 'none',
+                                }}
+                                mr={5}>
                                 <Stack direction={'row'}>
                                     <IconButton disabled variant="ghost" justifyContent={'flex-start'} pl={0} _icon={{
                                         as: Feather,
@@ -183,7 +291,19 @@ export default function CompaniesInfo() {
                                 </Stack>
                                 <Text mt={1} fontSize={'md'}>A development department of 250 people working on our product</Text>
                             </Stack>
-                            <Stack w={'20%'} mr={5}>
+                            <Stack
+                                w={{
+                                    base: '70%',
+                                    sm: '20%',
+                                    md: '20%',
+                                    lg: '20%',
+                                    xl: '20%',
+                                }}
+                                mt={{
+                                    base: 3,
+                                    sm: 'none',
+                                }}
+                                mr={5}>
                                 <Stack direction={'row'}>
                                     <IconButton disabled variant="ghost" justifyContent={'flex-start'} pl={0} _icon={{
                                         as: FontAwesome5,
@@ -201,50 +321,135 @@ export default function CompaniesInfo() {
                     <Box>
                         <Heading mt={10} size={'sm'}>Extra's</Heading>
                         <Flex direction={'row'} flexWrap={"wrap"}>
-                            <Stack w={'15%'} space={4} mt={2} textAlign="center">
+                            <Stack
+                                w={{
+                                    base: '30%',
+                                    sm: '15%',
+                                    md: '15%',
+                                    lg: '15%',
+                                    xl: '15%',
+                                }}
+                                space={4}
+                                mt={{
+                                    base: 3,
+                                    sm: 2
+                                }}
+                                textAlign="center">
                                 <IconButton disabled mx={'auto'} rounded="lg" backgroundColor="white" variant="solid" shadow={5} _icon={{
                                     as: AntDesign,
                                     name: "car",
                                     color: "violet.400",
                                     size: 8
                                 }} />
-                                <Text fontSize={'md'}>Tesla model 3</Text>
+                                <Text
+                                    fontSize={{
+                                        base: 'sm',
+                                        sm: 'md'
+                                    }}>Tesla model 3</Text>
                             </Stack>
-                            <Stack w={'15%'} space={4} mt={2} textAlign="center">
+                            <Stack
+                                w={{
+                                    base: '30%',
+                                    sm: '15%',
+                                    md: '15%',
+                                    lg: '15%',
+                                    xl: '15%',
+                                }}
+                                space={4}
+                                mt={{
+                                    base: 3,
+                                    sm: 2
+                                }}
+                                textAlign="center">
                                 <IconButton disabled mx={'auto'} rounded="lg" backgroundColor="white" variant="solid" shadow={5} _icon={{
                                     as: MaterialIcons,
                                     name: "fitness-center",
                                     color: "violet.400",
                                     size: 8
                                 }} />
-                                <Text fontSize={'md'}>In house Gym</Text>
+                                <Text
+                                    fontSize={{
+                                        base: 'sm',
+                                        sm: 'md'
+                                    }}>In house Gym</Text>
                             </Stack>
-                            <Stack w={'15%'} space={4} mt={2} textAlign="center">
+                            <Stack
+                                w={{
+                                    base: '30%',
+                                    sm: '15%',
+                                    md: '15%',
+                                    lg: '15%',
+                                    xl: '15%',
+                                }}
+                                space={4}
+                                mt={{
+                                    base: 3,
+                                    sm: 2
+                                }}
+                                textAlign="center">
                                 <IconButton disabled mx={'auto'} rounded="lg" backgroundColor="white" variant="solid" shadow={5} _icon={{
                                     as: AntDesign,
                                     name: "areachart",
                                     color: "violet.400",
                                     size: 8
                                 }} />
-                                <Text fontSize={'md'}>Annually growing salary</Text>
+                                <Text
+                                    fontSize={{
+                                        base: 'sm',
+                                        sm: 'md'
+                                    }}>Annually growing salary</Text>
                             </Stack>
-                            <Stack w={'15%'} space={4} mt={2} textAlign="center">
+                            <Stack
+                                w={{
+                                    base: '30%',
+                                    sm: '15%',
+                                    md: '15%',
+                                    lg: '15%',
+                                    xl: '15%',
+                                }}
+                                space={4}
+                                mt={{
+                                    base: 3,
+                                    sm: 2
+                                }}
+                                textAlign="center">
                                 <IconButton disabled mx={'auto'} rounded="lg" backgroundColor="white" variant="solid" shadow={5} _icon={{
                                     as: AntDesign,
                                     name: "rocket1",
                                     color: "violet.400",
                                     size: 8
                                 }} />
-                                <Text fontSize={'md'}>Startup</Text>
+                                <Text
+                                    fontSize={{
+                                        base: 'sm',
+                                        sm: 'md'
+                                    }}>Startup</Text>
                             </Stack>
-                            <Stack w={'15%'} space={4} mt={2} textAlign="center">
+                            <Stack
+                                w={{
+                                    base: '30%',
+                                    sm: '15%',
+                                    md: '15%',
+                                    lg: '15%',
+                                    xl: '15%',
+                                }}
+                                space={4}
+                                mt={{
+                                    base: 3,
+                                    sm: 2
+                                }}
+                                textAlign="center">
                                 <IconButton disabled mx={'auto'} rounded="lg" backgroundColor="white" variant="solid" shadow={5} _icon={{
                                     as: MaterialIcons,
                                     name: "flight",
                                     color: "violet.400",
                                     size: 8
                                 }} />
-                                <Text fontSize={'md'}>Possibility to work abroad</Text>
+                                <Text
+                                    fontSize={{
+                                        base: 'sm',
+                                        sm: 'md'
+                                    }}>Possibility to work abroad</Text>
                             </Stack>
                         </Flex>
                     </Box>
