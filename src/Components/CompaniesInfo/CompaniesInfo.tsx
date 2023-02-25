@@ -109,14 +109,16 @@ export default function CompaniesInfo() {
                             <Stack
                                 w={{
                                     base: '40%',
-                                    sm: '20%',
-                                    md: '20%',
+                                    sm: '40%',
+                                    md: '40%',
                                     lg: '20%',
                                     xl: '20%',
                                 }} mr={5}
                                 mt={{
                                     base: 3,
-                                    sm: 'none',
+                                    sm: 3,
+                                    md: 3,
+                                    lg: 'none'
                                 }}>
                                 <Stack direction={'row'}>
                                     <IconButton disabled variant="ghost" justifyContent={'flex-start'} pl={0} _icon={{
@@ -131,7 +133,8 @@ export default function CompaniesInfo() {
                             <Stack w={'15%'} mr={5}
                                 mt={{
                                     base: 3,
-                                    sm: 'none',
+                                    sm: 3,
+                                    md: 'none'
                                 }}>
                                 <Stack direction={'row'}>
                                     <IconButton disabled variant="ghost" justifyContent={'flex-start'} pl={0} _icon={{
@@ -146,14 +149,16 @@ export default function CompaniesInfo() {
                             <Stack
                                 w={{
                                     base: '40%',
-                                    sm: '20%',
-                                    md: '20%',
+                                    sm: '40%',
+                                    md: '40%',
                                     lg: '20%',
                                     xl: '20%',
                                 }}
                                 mt={{
                                     base: 3,
-                                    sm: 'none',
+                                    sm: 3,
+                                    md: 3,
+                                    lg: 'none'
                                 }} mr={5}>
                                 <Stack direction={'row'}>
                                     <IconButton disabled variant="ghost" justifyContent={'flex-start'} pl={0} _icon={{
@@ -168,14 +173,16 @@ export default function CompaniesInfo() {
                             <Stack
                                 w={{
                                     base: '40%',
-                                    sm: '20%',
-                                    md: '20%',
+                                    sm: '40%',
+                                    md: '40%',
                                     lg: '20%',
                                     xl: '20%',
                                 }}
                                 mt={{
                                     base: 3,
-                                    sm: 'none',
+                                    sm: 3,
+                                    md: 3,
+                                    lg: 'none'
                                 }}
                                 mr={5}>
                                 <Stack direction={'row'}>
@@ -191,14 +198,16 @@ export default function CompaniesInfo() {
                             <Stack
                                 w={{
                                     base: '40%',
-                                    sm: '20%',
-                                    md: '20%',
+                                    sm: '40%',
+                                    md: '40%',
                                     lg: '20%',
                                     xl: '20%',
                                 }}
                                 mt={{
                                     base: 3,
-                                    sm: 'none',
+                                    sm: 3,
+                                    md: 3,
+                                    lg: 'none'
                                 }} mr={5}>
                                 <Stack direction={'row'}>
                                     <IconButton disabled variant="ghost" justifyContent={'flex-start'} pl={0} _icon={{
@@ -213,14 +222,16 @@ export default function CompaniesInfo() {
                             <Stack
                                 w={{
                                     base: '40%',
-                                    sm: '20%',
-                                    md: '20%',
+                                    sm: '40%',
+                                    md: '40%',
                                     lg: '20%',
                                     xl: '20%',
                                 }}
                                 mt={{
                                     base: 3,
-                                    sm: 'none',
+                                    sm: 3,
+                                    md: 3,
+                                    lg: 'none'
                                 }}
                                 mr={5}>
                                 <Stack direction={'row'}>
@@ -249,14 +260,16 @@ export default function CompaniesInfo() {
                             <Stack
                                 w={{
                                     base: '40%',
-                                    sm: '20%',
-                                    md: '20%',
+                                    sm: '40%',
+                                    md: '40%',
                                     lg: '20%',
                                     xl: '20%',
                                 }}
                                 mt={{
                                     base: 3,
-                                    sm: 'none',
+                                    sm: 3,
+                                    md: 3,
+                                    lg: 'none'
                                 }} mr={5}>
                                 <Stack direction={'row'}>
                                     <IconButton disabled variant="ghost" justifyContent={'flex-start'} pl={0} _icon={{
@@ -271,14 +284,16 @@ export default function CompaniesInfo() {
                             <Stack
                                 w={{
                                     base: '40%',
-                                    sm: '20%',
-                                    md: '20%',
+                                    sm: '40%',
+                                    md: '40%',
                                     lg: '20%',
                                     xl: '20%',
                                 }}
                                 mt={{
                                     base: 3,
-                                    sm: 'none',
+                                    sm: 3,
+                                    md: 3,
+                                    lg: 'none'
                                 }}
                                 mr={5}>
                                 <Stack direction={'row'}>
@@ -294,14 +309,16 @@ export default function CompaniesInfo() {
                             <Stack
                                 w={{
                                     base: '70%',
-                                    sm: '20%',
-                                    md: '20%',
-                                    lg: '20%',
-                                    xl: '20%',
+                                    sm: '70%',
+                                    md: '50%',
+                                    lg: '40%',
+                                    xl: '40%',
                                 }}
                                 mt={{
                                     base: 3,
-                                    sm: 'none',
+                                    sm: 3,
+                                    md: 3,
+                                    lg: 'none'
                                 }}
                                 mr={5}>
                                 <Stack direction={'row'}>
@@ -324,15 +341,17 @@ export default function CompaniesInfo() {
                             <Stack
                                 w={{
                                     base: '30%',
-                                    sm: '15%',
-                                    md: '15%',
+                                    sm: '30%',
+                                    md: '30%',
                                     lg: '15%',
                                     xl: '15%',
                                 }}
                                 space={4}
                                 mt={{
                                     base: 3,
-                                    sm: 2
+                                    sm: 3,
+                                    md: 3,
+                                    lg: 'none'
                                 }}
                                 textAlign="center">
                                 <IconButton disabled mx={'auto'} rounded="lg" backgroundColor="white" variant="solid" shadow={5} _icon={{
@@ -344,21 +363,24 @@ export default function CompaniesInfo() {
                                 <Text
                                     fontSize={{
                                         base: 'sm',
-                                        sm: 'md'
+                                        sm: 'sm',
+                                        md: 'md'
                                     }}>Tesla model 3</Text>
                             </Stack>
                             <Stack
                                 w={{
                                     base: '30%',
-                                    sm: '15%',
-                                    md: '15%',
+                                    sm: '30%',
+                                    md: '30%',
                                     lg: '15%',
                                     xl: '15%',
                                 }}
                                 space={4}
                                 mt={{
                                     base: 3,
-                                    sm: 2
+                                    sm: 3,
+                                    md: 3,
+                                    lg: 'none'
                                 }}
                                 textAlign="center">
                                 <IconButton disabled mx={'auto'} rounded="lg" backgroundColor="white" variant="solid" shadow={5} _icon={{
@@ -370,21 +392,24 @@ export default function CompaniesInfo() {
                                 <Text
                                     fontSize={{
                                         base: 'sm',
-                                        sm: 'md'
+                                        sm: 'sm',
+                                        md: 'md'
                                     }}>In house Gym</Text>
                             </Stack>
                             <Stack
                                 w={{
                                     base: '30%',
-                                    sm: '15%',
-                                    md: '15%',
+                                    sm: '30%',
+                                    md: '30%',
                                     lg: '15%',
                                     xl: '15%',
                                 }}
                                 space={4}
                                 mt={{
                                     base: 3,
-                                    sm: 2
+                                    sm: 3,
+                                    md: 3,
+                                    lg: 'none'
                                 }}
                                 textAlign="center">
                                 <IconButton disabled mx={'auto'} rounded="lg" backgroundColor="white" variant="solid" shadow={5} _icon={{
@@ -396,21 +421,24 @@ export default function CompaniesInfo() {
                                 <Text
                                     fontSize={{
                                         base: 'sm',
-                                        sm: 'md'
+                                        sm: 'sm',
+                                        md: 'md'
                                     }}>Annually growing salary</Text>
                             </Stack>
                             <Stack
                                 w={{
                                     base: '30%',
-                                    sm: '15%',
-                                    md: '15%',
+                                    sm: '30%',
+                                    md: '30%',
                                     lg: '15%',
                                     xl: '15%',
                                 }}
                                 space={4}
                                 mt={{
                                     base: 3,
-                                    sm: 2
+                                    sm: 3,
+                                    md: 3,
+                                    lg: 'none'
                                 }}
                                 textAlign="center">
                                 <IconButton disabled mx={'auto'} rounded="lg" backgroundColor="white" variant="solid" shadow={5} _icon={{
@@ -422,21 +450,24 @@ export default function CompaniesInfo() {
                                 <Text
                                     fontSize={{
                                         base: 'sm',
-                                        sm: 'md'
+                                        sm: 'sm',
+                                        md: 'md'
                                     }}>Startup</Text>
                             </Stack>
                             <Stack
                                 w={{
                                     base: '30%',
-                                    sm: '15%',
-                                    md: '15%',
+                                    sm: '30%',
+                                    md: '30%',
                                     lg: '15%',
                                     xl: '15%',
                                 }}
                                 space={4}
                                 mt={{
                                     base: 3,
-                                    sm: 2
+                                    sm: 3,
+                                    md: 3,
+                                    lg: 'none'
                                 }}
                                 textAlign="center">
                                 <IconButton disabled mx={'auto'} rounded="lg" backgroundColor="white" variant="solid" shadow={5} _icon={{
@@ -448,7 +479,8 @@ export default function CompaniesInfo() {
                                 <Text
                                     fontSize={{
                                         base: 'sm',
-                                        sm: 'md'
+                                        sm: 'sm',
+                                        md: 'md'
                                     }}>Possibility to work abroad</Text>
                             </Stack>
                         </Flex>
