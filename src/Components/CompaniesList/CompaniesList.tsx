@@ -1,7 +1,6 @@
+import { AntDesign, MaterialIcons } from "@expo/vector-icons";
 import { Box, Button, Center, Divider, Flex, Heading, IconButton, Stack, Text } from "native-base";
 import * as React from 'react';
-import { AntDesign } from "@expo/vector-icons";
-import { MaterialIcons } from '@expo/vector-icons';
 
 export default function CompaniesList() {
     return (

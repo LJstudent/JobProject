@@ -1,9 +1,10 @@
-import CompaniesInfo from './Components/CompaniesInfo/CompaniesInfo';
 import { Text } from 'native-base';
 import * as React from 'react';
-import { Dimensions, StatusBar, StyleSheet } from 'react-native';
+import { Dimensions, StatusBar, StyleSheet, View } from 'react-native';
 import { NavigationState, SceneMap, SceneRendererProps, TabBar, TabView } from 'react-native-tab-view';
+import CompaniesInfo from './Components/CompaniesInfo/CompaniesInfo';
 import CompaniesList from './Components/CompaniesList/CompaniesList';
+import UserToolbar from './Components/UserOptions/UserToolbar';
 
 type State = NavigationState<{
     key: string;
@@ -32,20 +33,23 @@ export default function Main() {
     );
 
     return (
-        <TabView
-            navigationState={{
-                index,
-                routes
-            }}
-            renderScene={SceneMap({
-                first: CompaniesInfo,
-                second: CompaniesList,
-            })}
-            renderTabBar={renderTabBar}
-            onIndexChange={setIndex}
-            initialLayout={{ width: Dimensions.get('window').width }}
-            style={styles.container}
-        />
+        <View>
+            <UserToolbar />
+            <TabView
+                navigationState={{
+                    index,
+                    routes
+                }}
+                renderScene={SceneMap({
+                    first: CompaniesInfo,
+                    second: CompaniesList,
+                })}
+                renderTabBar={renderTabBar}
+                onIndexChange={setIndex}
+                initialLayout={{ width: Dimensions.get('window').width }}
+                style={styles.container}
+            />
+        </View>
     );
 }
 

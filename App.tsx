@@ -3,6 +3,7 @@ import { Center, extendTheme, NativeBaseProvider } from 'native-base';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Main from './src/Main';
+import 'react-native-gesture-handler';
 
 export default function App() {
   const theme = extendTheme({
