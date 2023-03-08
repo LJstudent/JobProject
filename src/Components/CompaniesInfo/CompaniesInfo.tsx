@@ -75,7 +75,7 @@ export default function CompaniesInfo() {
                                 name: "check",
                                 color: "green.500"
                             }} />
-                            <Text ml="-4" alignSelf="center" fontSize={'md'}>You will be part of one of our many multidisciplinary streams, creating or enhancing the user interface for both internal users and our merchants.</Text>
+                            <Text ml="-4" mr={{ base: "40px", sm: 'none' }} _web={{ marginRight: 'none' }} alignSelf="center" fontSize={'md'}>You will be part of one of our many multidisciplinary streams, creating or enhancing the user interface for both internal users and our merchants.</Text>
                         </Stack>
                         <Stack mt={{ base: 2, xl: 1 }} direction="row">
                             <IconButton disabled variant="ghost" width={20} ml="-8" _icon={{
@@ -83,7 +83,7 @@ export default function CompaniesInfo() {
                                 name: "check",
                                 color: "green.500"
                             }} />
-                            <Text ml="-4" alignSelf="center" fontSize={'md'}>You will be responsible for the full life cycle of your developments. This includes communicating with stakeholders (product owners, product designers, account managers, merchants e.g.), testing, iterating purposefully, and monitoring the impact of your projects.</Text>
+                            <Text ml="-4" mr={{ base: "40px", sm: 'none' }} _web={{ marginRight: 'none' }} alignSelf="center" fontSize={'md'}>You will be responsible for the full life cycle of your developments. This includes communicating with stakeholders (product owners, product designers, account managers, merchants e.g.), testing, iterating purposefully, and monitoring the impact of your projects.</Text>
                         </Stack>
                         <Stack mt={{ base: 2, xl: 1 }} direction="row">
                             <IconButton disabled variant="ghost" width={20} ml="-8" _icon={{
@@ -91,7 +91,7 @@ export default function CompaniesInfo() {
                                 name: "check",
                                 color: "green.500"
                             }} />
-                            <Text ml="-4" alignSelf="center" fontSize={'md'}>You will have the freedom to identify and improve parts of the platform to make it more consistent, robust and scalable.</Text>
+                            <Text ml="-4" mr={{ base: "40px", sm: 'none' }} _web={{ marginRight: 'none' }} alignSelf="center" fontSize={'md'}>You will have the freedom to identify and improve parts of the platform to make it more consistent, robust and scalable.</Text>
                         </Stack>
                         <Stack mt={{ base: 2, xl: 1 }} direction="row">
                             <IconButton disabled variant="ghost" width={20} ml="-8" _icon={{
@@ -99,7 +99,7 @@ export default function CompaniesInfo() {
                                 name: "check",
                                 color: "green.500"
                             }} />
-                            <Text ml="-4" alignSelf="center" fontSize={'md'}>There are Frontend developers in many teams and keeping in sync with this group is important for maintaining our scalability. You will collaborate across streams and time zones to make things happen.</Text>
+                            <Text ml="-4" mr={{ base: "40px", sm: 'none' }} _web={{ marginRight: 'none' }} alignSelf="center" fontSize={'md'}>There are Frontend developers in many teams and keeping in sync with this group is important for maintaining our scalability. You will collaborate across streams and time zones to make things happen.</Text>
                         </Stack>
                     </Box>
 
@@ -130,7 +130,14 @@ export default function CompaniesInfo() {
                                 </Stack>
                                 <Text mt={1} fontSize={'md'}>React, SQL, Redux, Typescript, Jest and Enzyme</Text>
                             </Stack>
-                            <Stack w={'15%'} mr={5}
+                            <Stack
+                                w={{
+                                    base: '30%',
+                                    sm: '30%',
+                                    md: '30%',
+                                    lg: '15%',
+                                    xl: '15%',
+                                }} mr={5}
                                 mt={{
                                     base: 3,
                                     sm: 3,
