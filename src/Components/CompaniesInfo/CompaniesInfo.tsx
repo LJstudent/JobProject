@@ -45,7 +45,7 @@ export default function CompaniesInfo() {
                         This is Mars
                     </Heading>
                     <Text fontSize="md">
-                        Adyen provides payments, data, and financial products in a single solution for customers like Facebook, Uber, H&M, and Microsoft - making us the financial technology platform of choice. At Adyen, everything we do is engineered for ambition.<br></br><br></br>
+                        Adyen provides payments, data, and financial products in a single solution for customers like Facebook, Uber, H&M, and Microsoft - making us the financial technology platform of choice. At Adyen, everything we do is engineered for ambition.{"\n"}{"\n"}
                         For our teams, we create an environment with opportunities for our people to succeed, backed by the culture and support to ensure they are enabled to truly own their careers.
                         We are motivated individuals who tackle unique technical challenges at scale and solve them as a team. Together, we deliver innovative and ethical solutions that help businesses achieve their ambitions faster.
                     </Text>
@@ -54,9 +54,9 @@ export default function CompaniesInfo() {
                     </Heading>
                     <Text fontSize="md">
                         Next to our payments offering Adyen is also building an entire suite of embedded financial services for platforms such as marketplaces, SaaS platforms, on-demand platforms or crowdfunding platforms. Our Chicago engineering hub is focusing on that!
-                        <br></br><br></br>
+                        {"\n"}{"\n"}
                         We give platforms the ability to manage their global payments ecosystem in one place through API integrations or by using our hosted onboarding solution. They can run onboarding, verification and compliance processes for various markets, process payments and trigger faster payouts and bank transfers in all preferred currencies. Additionally they can enable financial services such as issuing, capital and banking.
-                        <br></br><br></br>
+                        {"\n"}{"\n"}
                         We are looking for a frontend engineer that can help take our merchant onboarding experience through hosted pages to the next level. Additionally you might be involved with building shared frontend components and libraries that will allow us to efficiently operate our suite of embedded financial services.
                     </Text>
 

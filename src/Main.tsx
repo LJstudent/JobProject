@@ -1,3 +1,4 @@
+import { Props } from 'Components/Navigation/RootStackParamList';
 import { Text } from 'native-base';
 import * as React from 'react';
 import { Dimensions, StatusBar, StyleSheet, View } from 'react-native';
@@ -11,7 +12,7 @@ type State = NavigationState<{
     title: string;
 }>;
 
-export default function Main() {
+export default function Main({ navigation, route }: Props) {
     const [index, setIndex] = React.useState(0);
     const [routes] = React.useState([
         { key: 'first', title: 'Companies' },
@@ -34,7 +35,7 @@ export default function Main() {
 
     return (
         <View>
-            <UserToolbar />
+            <UserToolbar navigation={navigation} route={route} />
             <TabView
                 navigationState={{
                     index,
