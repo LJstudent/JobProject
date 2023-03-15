@@ -42,8 +42,8 @@ export default function Main({ navigation, route }: Props) {
                     routes
                 }}
                 renderScene={SceneMap({
-                    first: CompaniesInfo,
-                    second: CompaniesList,
+                    first: CompaniesList,
+                    second: CompaniesInfo,
                 })}
                 renderTabBar={renderTabBar}
                 onIndexChange={setIndex}
