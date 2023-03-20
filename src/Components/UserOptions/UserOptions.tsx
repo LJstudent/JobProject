@@ -1,7 +1,7 @@
 import { Feather } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { RootBottomParamList } from 'Components/Navigation/RootStackParamList';
-import { Button, Icon, useMediaQuery, Text } from 'native-base';
+import { Button, Icon, useMediaQuery, Text, Box } from 'native-base';
 import React from 'react';
 import { Dimensions, Platform, View, StyleSheet } from 'react-native';
 import Animated, {
@@ -139,7 +139,7 @@ export default function UserOptions() {
                             right: 20,
                             backgroundColor: '#ffffff',
                             borderRadius: 15,
-                            height: 90,
+                            height: 65,
                             ...styles.shadow
                         }
 
@@ -147,32 +147,32 @@ export default function UserOptions() {
                     sceneContainerStyle={{ backgroundColor: 'white' }}>
                     <Tab.Screen name="UserProfile" component={UserProfile} options={{
                         tabBarIcon: ({ focused }) => (
-                            <View style={{ alignItems: 'center', justifyContent: 'center', top: 10 }}>
+                            <Box _web={{ top: 0 }} top={5} style={{ alignItems: 'center', justifyContent: 'center' }}>
                                 <Icon as={Feather} name="user" size={'lg'} color={focused ? 'violet.500' : '#748c94'} />
                                 <Text fontSize={12} color={focused ? 'violet.500' : '#748c94'}>
                                     Profile
                                 </Text>
-                            </View>
+                            </Box>
                         ),
                     }} />
                     <Tab.Screen name="UserSettings" component={UserSettings} options={{
                         tabBarIcon: ({ focused }) => (
-                            <View style={{ alignItems: 'center', justifyContent: 'center', top: 10 }}>
+                            <Box _web={{ top: 0 }} top={5} style={{ alignItems: 'center', justifyContent: 'center' }}>
                                 <Icon as={Feather} name="settings" size={'lg'} color={focused ? 'violet.500' : '#748c94'} />
                                 <Text fontSize={12} color={focused ? 'violet.500' : '#748c94'}>
                                     Settings
                                 </Text>
-                            </View>
+                            </Box>
                         ),
                     }} />
                     <Tab.Screen name="JobApplyings" component={UserJobApplyings} options={{
                         tabBarIcon: ({ focused }) => (
-                            <View style={{ alignItems: 'center', justifyContent: 'center', top: 10, width: 100 }}>
+                            <Box _web={{ top: 0 }} top={5} style={{ alignItems: 'center', justifyContent: 'center', width: 100 }}>
                                 <Icon as={Feather} name="inbox" size={'lg'} color={focused ? 'violet.500' : '#748c94'} />
                                 <Text fontSize={12} color={focused ? 'violet.500' : '#748c94'}>
                                     Job applyings
                                 </Text>
-                            </View>
+                            </Box>
                         ),
                     }} />
                 </Tab.Navigator>}

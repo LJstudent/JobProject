@@ -1,6 +1,6 @@
 import { AntDesign, Feather } from '@expo/vector-icons';
 import { Chip } from '@rneui/themed';
-import { Box, Checkbox, Divider, Flex, FormControl, Heading, IconButton, Input, ScrollView, Stack, Text } from 'native-base';
+import { Box, Checkbox, Divider, Flex, FormControl, Heading, IconButton, Input, ScrollView, Stack, Text, TextArea } from 'native-base';
 import React from 'react';
 import { Dimensions } from 'react-native';
 
@@ -27,8 +27,8 @@ export default function UserProfile() {
                     Profile
                 </Heading>
 
-                <Divider alignSelf="center" thickness="2" orientation="horizontal" />
-                <Heading size="md">
+                <Divider alignSelf="center" thickness="2" orientation="horizontal" mb={2} />
+                <Heading size="md" mb={2}>
                     General info
                 </Heading>
                 <FormControl>
@@ -47,15 +47,15 @@ export default function UserProfile() {
                     <FormControl.Label>City</FormControl.Label>
                     <Input defaultValue='Utrecht' />
                 </FormControl>
-                <Checkbox value="yes" defaultIsChecked>
+                <Checkbox value="yes" defaultIsChecked my={4} >
                     European Union citizenship
                 </Checkbox>
 
-                <Divider alignSelf="center" thickness="2" orientation="horizontal" />
+                <Divider alignSelf="center" thickness="2" orientation="horizontal" mb={2}/>
                 <Heading size="md">
                     Work Experience
                 </Heading>
-                <Box my={5} px={6} pb={6} pt={2} rounded="3xl" borderColor="coolGray.200" borderWidth="1" shadow={3}>
+                <Box my={5} px={6} pb={6} pt={2} rounded="3xl" borderColor="coolGray.200" borderWidth="1" shadow={3} width={'100%'} backgroundColor={'white'}>
                     <Stack justifyContent={'end'} direction={'row'}>
                         <IconButton variant="ghost" _icon={{
                             as: Feather,
@@ -68,8 +68,8 @@ export default function UserProfile() {
                             color: 'black'
                         }} />
                     </Stack>
-                    <Stack mt={5} direction={{ base: 'column', sm: 'column', md: 'row' }}>
-                        <Stack direction={'column'} mb={{ base: 2, sm: 2, md: 'none' }}>
+                    <Stack direction={{ base: 'column', sm: 'column', md: 'row' }}>
+                        <Stack direction={'column'} mb={{ base: 4, sm: 4, md: 'none' }}>
                             <Heading size={'sm'}>Thinkwise</Heading>
                             <Text>September 2020-Present</Text>
                             <Text>Apeldoorn, Netherlands</Text>
@@ -85,7 +85,7 @@ export default function UserProfile() {
                                 lg: '35%',
                                 xl: '40%',
                             }}
-                            mb={{ base: 2, sm: 2, md: 'none' }}>
+                            mb={{ base: 4, sm: 4, md: 'none' }}>
                             <Heading size={'sm'}>Front-end developer</Heading>
                             <Text>Working with dynamic software make develop of this software very interesting</Text>
                         </Stack>
@@ -117,8 +117,8 @@ export default function UserProfile() {
                     </Stack>
                 </Box>
 
-                <Divider alignSelf="center" thickness="2" orientation="horizontal" />
-                <Heading size="md">
+                <Divider alignSelf="center" thickness="2" orientation="horizontal" mb={2} />
+                <Heading size="md" mb={2}>
                     Links
                 </Heading>
                 <FormControl>
@@ -134,11 +134,11 @@ export default function UserProfile() {
                     <Input defaultValue='Leon' />
                 </FormControl>
 
-                <Divider alignSelf="center" thickness="2" orientation="horizontal" />
+                <Divider alignSelf="center" thickness="2" orientation="horizontal" mt={4} mb={2} />
                 <Heading size="md">
                     Education
                 </Heading>
-                <Box my={5} px={6} pb={6} pt={2} rounded="3xl" borderColor="coolGray.200" borderWidth="1" shadow={3} backgroundColor="white" width={'100%'}>
+                <Box my={5} px={6} pb={6} pt={2} rounded="3xl" borderColor="coolGray.200" borderWidth="1" shadow={3} width={'100%'} backgroundColor={'white'}>
                     <Stack justifyContent={'end'} direction={'row'}>
                         <IconButton variant="ghost" _icon={{
                             as: Feather,
@@ -157,15 +157,13 @@ export default function UserProfile() {
                         <Text>Bachelor of science IT</Text>
                     </Stack>
                 </Box>
-                <Divider alignSelf="center" thickness="2" orientation="horizontal" />
-                <Heading size="md">
+                <Divider alignSelf="center" thickness="2" orientation="horizontal" mb={2}/>
+                <Heading size="md" mb={2}>
                     About
                 </Heading>
-                <Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </Text>
+                <TextArea width={'100%'} autoCompleteType={false} defaultValue='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' />
             </Box>
         </ScrollView>
     )
