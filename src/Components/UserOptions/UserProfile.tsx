@@ -51,11 +51,18 @@ export default function UserProfile() {
                     European Union citizenship
                 </Checkbox>
 
-                <Divider alignSelf="center" thickness="2" orientation="horizontal" mb={2}/>
-                <Heading size="md">
-                    Work Experience
-                </Heading>
-                <Box my={5} px={6} pb={6} pt={2} rounded="3xl" borderColor="coolGray.200" borderWidth="1" shadow={3} width={'100%'} backgroundColor={'white'}>
+                <Divider alignSelf="center" thickness="2" orientation="horizontal" mb={2} />
+                <Stack w={'100%'} direction={'row'} alignItems="center" justifyContent="space-between">
+                    <Heading size="md">
+                        Work Experience
+                    </Heading>
+                    <IconButton onPress={() => alert(Dimensions.get("window").width)} variant="ghost" _icon={{
+                        as: AntDesign,
+                        name: "plus",
+                        color: 'black'
+                    }} />
+                </Stack>
+                <Box mt={3} mb={5} px={6} pb={6} pt={2} rounded="3xl" borderColor="coolGray.200" borderWidth="1" shadow={3} width={'100%'} backgroundColor={'white'}>
                     <Stack justifyContent={'end'} direction={'row'}>
                         <IconButton variant="ghost" _icon={{
                             as: Feather,
@@ -135,10 +142,17 @@ export default function UserProfile() {
                 </FormControl>
 
                 <Divider alignSelf="center" thickness="2" orientation="horizontal" mt={4} mb={2} />
-                <Heading size="md">
-                    Education
-                </Heading>
-                <Box my={5} px={6} pb={6} pt={2} rounded="3xl" borderColor="coolGray.200" borderWidth="1" shadow={3} width={'100%'} backgroundColor={'white'}>
+                <Stack w={'100%'} direction={'row'} alignItems="center" justifyContent="space-between">
+                    <Heading size="md">
+                        Education
+                    </Heading>
+                    <IconButton onPress={() => alert(Dimensions.get("window").width)} variant="ghost" _icon={{
+                        as: AntDesign,
+                        name: "plus",
+                        color: 'black'
+                    }} />
+                </Stack>
+                <Box mt={3} mb={5} px={6} pb={6} pt={2} rounded="3xl" borderColor="coolGray.200" borderWidth="1" shadow={3} width={'100%'} backgroundColor={'white'}>
                     <Stack justifyContent={'end'} direction={'row'}>
                         <IconButton variant="ghost" _icon={{
                             as: Feather,
@@ -157,7 +171,7 @@ export default function UserProfile() {
                         <Text>Bachelor of science IT</Text>
                     </Stack>
                 </Box>
-                <Divider alignSelf="center" thickness="2" orientation="horizontal" mb={2}/>
+                <Divider alignSelf="center" thickness="2" orientation="horizontal" mb={2} />
                 <Heading size="md" mb={2}>
                     About
                 </Heading>
