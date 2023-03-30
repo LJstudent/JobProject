@@ -361,7 +361,7 @@ export default function UserSettings() {
                         }}>
                         <Stack direction={'row'} justifyContent="space-between">
                             <IconButton
-                                ml={20}
+                                ml={{base: 10, sm: 20}}
                                 icon={<Icon as={AntDesign} name="checkcircle" />}
                                 borderRadius="full"
                                 onPress={() => alert('hello')}
@@ -380,7 +380,7 @@ export default function UserSettings() {
                                 }}
                             />
                             <IconButton
-                                mr={20}
+                                mr={{base: 10, sm: 20}}
                                 icon={<Icon as={AntDesign} name="closecircle" />}
                                 borderRadius="full"
                                 onPress={() => alert('hello')}
