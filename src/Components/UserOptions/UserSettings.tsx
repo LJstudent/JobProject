@@ -1,10 +1,9 @@
-import { FontAwesome, MaterialIcons } from '@expo/vector-icons';
+import { AntDesign, FontAwesome, MaterialIcons } from '@expo/vector-icons';
 import { Avatar, Button, ButtonGroup } from '@rneui/themed';
 import { Box, Heading, Icon, IconButton, Image, ScrollView, Stack, Text } from 'native-base';
 import React, { useState } from 'react';
 import { Dimensions, Platform } from 'react-native';
-import Animated, { Easing, JumpingTransition, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
-import { AntDesign } from '@expo/vector-icons';
+import Animated, { Easing, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 
 // FIXME need reanimated update, see https://github.com/software-mansion/react-native-reanimated/issues/3355
 if (Platform.OS === 'web') {
