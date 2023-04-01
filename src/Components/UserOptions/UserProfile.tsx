@@ -1,6 +1,6 @@
 import { AntDesign, Feather } from '@expo/vector-icons';
 import { Chip } from '@rneui/themed';
-import { Box, Checkbox, Divider, Flex, FormControl, Heading, IconButton, Input, ScrollView, Stack, Text, TextArea } from 'native-base';
+import { Box, Button, Checkbox, Divider, Flex, FormControl, Heading, Icon, IconButton, Input, ScrollView, Stack, Text, TextArea } from 'native-base';
 import React from 'react';
 import { Dimensions } from 'react-native';
 
@@ -16,6 +16,7 @@ export default function UserProfile() {
                     xl: '50%',
                 }}
                 style={{
+                    marginTop: 20,
                     marginLeft: 'auto',
                     marginRight: 'auto',
                     justifyContent: 'center',
@@ -23,10 +24,29 @@ export default function UserProfile() {
                     flexDirection: 'column',
                     marginBottom: 24
                 }}>
-                <Heading size="xl">
-                    Profile
-                </Heading>
 
+                <Stack direction={'row'} w={'100%'} justifyContent="space-between">
+                    <Heading alignSelf="center" size="xl">
+                        Profile
+                    </Heading>
+                    <Button
+                        shadow={2}
+                        onPress={() => alert("hello")}
+                        borderRadius={'2xl'}
+                        mb={2}
+                        w={24}
+                        leftIcon={<Icon as={AntDesign} size="md" name="save" mr={0.5} />}
+                        bg="green.600"
+                        _hover={{
+                            bg: "green.700",
+                        }}
+                        _pressed={{
+                            bg: "green.700",
+                        }}
+                    >
+                        Save
+                    </Button>
+                </Stack>
                 <Divider alignSelf="center" thickness="2" orientation="horizontal" mb={2} />
                 <Heading size="md" mb={2}>
                     General info
@@ -47,7 +67,7 @@ export default function UserProfile() {
                     <FormControl.Label>City</FormControl.Label>
                     <Input defaultValue='Utrecht' />
                 </FormControl>
-                <Checkbox value="yes" defaultIsChecked my={4} >
+                <Checkbox colorScheme={"purple"} value="yes" defaultIsChecked my={4} >
                     European Union citizenship
                 </Checkbox>
 
@@ -110,15 +130,15 @@ export default function UserProfile() {
                             }}>
                             <Heading size={'sm'}>Code skills</Heading>
                             <Flex mt={2} mr={{ lg: 0, xl: 7 }} direction={'row'} flexWrap={"wrap"}>
-                                <Chip title="React" containerStyle={{ marginRight: 2, marginTop: 2 }} />
-                                <Chip title="Redux" containerStyle={{ marginRight: 2, marginTop: 2 }} />
-                                <Chip title="Rxjs" containerStyle={{ marginRight: 2, marginTop: 2 }} />
-                                <Chip title="SQL" containerStyle={{ marginRight: 2, marginTop: 2 }} />
-                                <Chip title="Typescript" containerStyle={{ marginRight: 2, marginTop: 2 }} />
-                                <Chip title="Jest" containerStyle={{ marginRight: 2, marginTop: 2 }} />
-                                <Chip title="Angular" containerStyle={{ marginRight: 2, marginTop: 2 }} />
-                                <Chip title="Laravel" containerStyle={{ marginRight: 2, marginTop: 2 }} />
-                                <Chip title="Phyton" containerStyle={{ marginRight: 2, marginTop: 2 }} />
+                                <Chip title="React" color={'#8b5cf6'} containerStyle={{ marginRight: 2, marginTop: 2 }} />
+                                <Chip title="Redux" color={'#8b5cf6'} containerStyle={{ marginRight: 2, marginTop: 2 }} />
+                                <Chip title="Rxjs" color={'#8b5cf6'} containerStyle={{ marginRight: 2, marginTop: 2 }} />
+                                <Chip title="SQL" color={'#8b5cf6'} containerStyle={{ marginRight: 2, marginTop: 2 }} />
+                                <Chip title="Typescript" color={'#8b5cf6'} containerStyle={{ marginRight: 2, marginTop: 2 }} />
+                                <Chip title="Jest" color={'#8b5cf6'} containerStyle={{ marginRight: 2, marginTop: 2 }} />
+                                <Chip title="Angular" color={'#8b5cf6'} containerStyle={{ marginRight: 2, marginTop: 2 }} />
+                                <Chip title="Laravel" color={'#8b5cf6'} containerStyle={{ marginRight: 2, marginTop: 2 }} />
+                                <Chip title="Phyton" color={'#8b5cf6'} containerStyle={{ marginRight: 2, marginTop: 2 }} />
                             </Flex>
                         </Stack>
                     </Stack>

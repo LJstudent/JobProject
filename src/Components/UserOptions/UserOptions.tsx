@@ -1,9 +1,10 @@
 import { Feather } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { RootBottomParamList } from 'Components/Navigation/RootStackParamList';
-import { Button, Icon, useMediaQuery, Text, Box } from 'native-base';
+import { createStackNavigator } from '@react-navigation/stack';
+import { ListProps, RootBottomParamList } from 'Components/Navigation/RootStackParamList';
+import { Box, Button, Icon, Text, useMediaQuery } from 'native-base';
 import React from 'react';
-import { Dimensions, Platform, View, StyleSheet } from 'react-native';
+import { Dimensions, Platform, StyleSheet, View } from 'react-native';
 import Animated, {
     Easing, useAnimatedStyle, useSharedValue, withTiming
 } from 'react-native-reanimated';
@@ -22,9 +23,29 @@ const SCREENWIDTH = Dimensions.get("window").width;
 // create tab for bottom tab navigator
 const Tab = createBottomTabNavigator<RootBottomParamList>();
 
+// create tab for list tab navigator
+const Stack = createStackNavigator<RootBottomParamList>();
 
-export default function UserOptions() {
-    const [isSmallScreen] = useMediaQuery({
+function MyStackUserOptions() {
+    return (
+        <Stack.Navigator
+            screenOptions={{
+                headerShown: false,
+                cardStyle: {
+                    backgroundColor: 'white',
+                }
+            }}>
+            <Stack.Screen name="UserProfile" component={UserProfile} />
+            <Stack.Screen name="UserSettings" component={UserSettings} />
+            <Stack.Screen name="JobApplyings" component={UserJobApplyings} />
+        </Stack.Navigator>
+    );
+}
+
+
+
+export default function UserOptions({ navigation }: ListProps) {
+    const [isBigScreen] = useMediaQuery({
         minWidth: 870,
     });
     const translateX = useSharedValue(-SCREENWIDTH);
@@ -72,60 +93,107 @@ export default function UserOptions() {
     translateX.value = 0
     return (
         <View style={{ flex: 1 }}>
-            {isSmallScreen ?
-                <View style={{ flexDirection: 'row' }}>
+            {isBigScreen ?
+                <View style={{ flex: 1, flexDirection: 'row' }}>
                     <View
                         style={{
+                            marginTop: 20,
                             alignItems: "flex-start",
                             flexDirection: 'column',
                         }}>
                         <Animated.View
                             style={[{ width: '100%' }, style]}
                         >
-                            <Button onPress={() => alert("hello")} mt={2} paddingLeft={5} justifyContent={'flex-start'} borderRadius={'2xl'} variant={'ghost'} mb={2} leftIcon={<Icon as={Feather} size='md' name="user" marginRight={4} />} _text={{
-                                fontSize: {
-                                    base: 'none',
-                                    sm: 'sm',
-                                    md: 'sm',
-                                    lg: 'md',
-                                    xl: 'lg',
-                                }
-                            }}>
+                            <Button onPress={() => navigation.navigate('UserProfile')}
+                                mt={2} paddingLeft={5}
+                                justifyContent={'flex-start'}
+                                borderRadius={'2xl'}
+                                variant={'ghost'}
+                                mb={2} leftIcon={<Icon as={Feather} color={"violet.500"} size='md' name="user" marginRight={4} />}
+                                _text={{
+                                    color: "violet.500",
+                                    fontSize: {
+                                        base: 'none',
+                                        sm: 'sm',
+                                        md: 'sm',
+                                        lg: 'md',
+                                        xl: 'lg',
+                                    }
+                                }}
+                                _hover={{
+                                    bg: "violet.100",
+                                }}
+                                _pressed={{
+                                    bg: "violet.200",
+                                }}
+                            >
                                 Profile
                             </Button>
                         </Animated.View>
                         <Animated.View
                             style={[{ width: '100%' }, style1]}
                         >
-                            <Button paddingLeft={5} justifyContent={'flex-start'} borderRadius={'2xl'} variant={'ghost'} mb={2} leftIcon={<Icon as={Feather} size='md' name="settings" marginRight={4} />} _text={{
-                                fontSize: {
-                                    base: 'none',
-                                    sm: 'sm',
-                                    md: 'sm',
-                                    lg: 'md',
-                                    xl: 'lg',
-                                }
-                            }}>
+                            <Button
+                                onPress={() => navigation.navigate('UserSettings')}
+                                paddingLeft={5}
+                                justifyContent={'flex-start'}
+                                borderRadius={'2xl'}
+                                variant={'ghost'}
+                                mb={2}
+                                leftIcon={<Icon as={Feather} color={"violet.500"} size='md' name="settings" marginRight={4} />}
+                                _text={{
+                                    color: "violet.500",
+                                    fontSize: {
+                                        base: 'none',
+                                        sm: 'sm',
+                                        md: 'sm',
+                                        lg: 'md',
+                                        xl: 'lg',
+                                    }
+                                }}
+                                _hover={{
+                                    bg: "violet.100",
+                                }}
+                                _pressed={{
+                                    bg: "violet.200",
+                                }}
+                            >
                                 Settings
                             </Button>
                         </Animated.View>
                         <Animated.View
                             style={[{ width: '100%' }, style2]}
                         >
-                            <Button paddingLeft={5} justifyContent={'flex-start'} borderRadius={'2xl'} variant={'ghost'} mb={2} leftIcon={<Icon as={Feather} size='md' name="inbox" marginRight={4} />} _text={{
-                                fontSize: {
-                                    base: 'none',
-                                    sm: 'sm',
-                                    md: 'sm',
-                                    lg: 'md',
-                                    xl: 'lg',
-                                }
-                            }}>
+                            <Button
+                                onPress={() => navigation.navigate('JobApplyings')}
+                                paddingLeft={5}
+                                justifyContent={'flex-start'}
+                                borderRadius={'2xl'}
+                                variant={'ghost'}
+                                mb={2}
+                                leftIcon={<Icon as={Feather} color={"violet.500"} size='md' name="inbox" marginRight={4} />}
+                                _text={{
+                                    color: "violet.500",
+                                    fontSize: {
+                                        base: 'none',
+                                        sm: 'sm',
+                                        md: 'sm',
+                                        lg: 'md',
+                                        xl: 'lg',
+                                    }
+                                }}
+                                _hover={{
+                                    bg: "violet.100",
+                                }}
+                                _pressed={{
+                                    bg: "violet.200",
+                                }}
+                            >
                                 Job Applyings
                             </Button>
                         </Animated.View>
                     </View>
-                    <UserProfile />
+                    <MyStackUserOptions />
                 </View>
                 :
                 <Tab.Navigator

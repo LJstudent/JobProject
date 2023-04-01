@@ -15,3 +15,5 @@ export type RootBottomParamList = {
 }
 
 export type BottomProps = BottomTabScreenProps<RootBottomParamList, 'UserProfile'>;
+
+export type ListProps = StackScreenProps<RootBottomParamList, 'UserProfile'>;
