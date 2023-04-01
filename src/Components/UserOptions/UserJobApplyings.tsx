@@ -41,7 +41,7 @@ export default function UserJobApplyings() {
     const jbStsTest = 'Approved';
     const randomHeightNumber = useSharedValue(375); //375
     const translateY = useSharedValue(0); //0
-    const marginTopValue = useSharedValue(40); //40
+    const marginTopValue = useSharedValue(20); //20
     const messageY = useSharedValue(SCREENHEIGHT + 100)
 
     const style = useAnimatedStyle(() => {
@@ -109,7 +109,6 @@ export default function UserJobApplyings() {
                             borderWidth: 1,
                             borderRadius: 20,
                             width: 100,
-
                         }}
                         containerStyle={{
                             width: 330,
@@ -123,7 +122,7 @@ export default function UserJobApplyings() {
                 <Animated.View
                     style={[{}, style]}
                 >
-                    <Box mt={4} overflow='hidden' rounded={'xl'} shadow={3} borderColor="coolGray.200" borderWidth="1" backgroundColor="white" w={{ sm: '100%', md: '400px' }} maxWidth={{ sm: '400px', md: '400px' }} h={'100%'}>
+                    <Box mt={4} overflow='hidden' rounded={'xl'} shadow={3} borderColor="coolGray.200" borderWidth="1" backgroundColor="white" w={{ sm: '100%', md: '400px' }} maxWidth={{ base: '350px', sm: '400px', md: '400px' }} h={'100%'}>
                         <Stack direction={'row'} m={4}>
                             <Box w={'100px'} height={'100px'} shadow={3} rounded='xl' backgroundColor={'white'} justifyContent='center' alignItems='center'>
                                 <Image rounded={'xl'} source={{
@@ -233,7 +232,7 @@ export default function UserJobApplyings() {
                             variant="ghost"
                             borderRadius="full"
                             icon={<Icon as={AntDesign} name="down" />}
-                            onPress={() => { setOpenScreen(false), randomHeightNumber.value = 375, translateY.value = 0, marginTopValue.value = 40, messageY.value = SCREENHEIGHT + 100 }}
+                            onPress={() => { setOpenScreen(false), randomHeightNumber.value = 375, translateY.value = 0, marginTopValue.value = 20, messageY.value = SCREENHEIGHT + 100 }}
                             _icon={{
                                 size: 'lg',
                                 color: "gray.400"
