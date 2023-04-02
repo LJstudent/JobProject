@@ -34,7 +34,7 @@ export default function Main({ navigation, route }: Props) {
     );
 
     return (
-        <View>
+        <View style={{height: "100%"}}>
             <UserToolbar navigation={navigation} route={route} />
             <TabView
                 navigationState={{

@@ -14,16 +14,26 @@ export default function CompaniesList() {
                     xl: "800px",
                 }}>
                     <Box p={{ base: 2, sm: 5 }} mt="10" overflow="hidden" rounded="3xl" borderColor="coolGray.200" borderWidth="1" shadow={3} backgroundColor="white" position="absolute">
-                        <Stack space={1} mt={{
-                            base: "5",
-                            sm: "10",
-                            md: "10",
-                            lg: "10",
-                            xl: "10",
-                        }} ml={{
-                            base: "24",
-                            sm: undefined,
-                        }} textAlign="center">
+                        <Stack space={1}
+                            mt={{
+                                base: "5",
+                                sm: "10",
+                                md: "10",
+                                lg: "10",
+                                xl: "10",
+                            }}
+                            ml={{
+                                base: '140px',
+                                sm: undefined,
+                            }}
+                            _web={{
+                                ml:
+                                {
+                                    base: 24,
+                                    sm: undefined,
+                                }
+                            }}
+                            textAlign="center">
                             <Heading size="xl">
                                 MARS
                             </Heading>
@@ -35,73 +45,43 @@ export default function CompaniesList() {
                                 Front-end developer
                             </Text>
                         </Stack>
-                        <Box mt="2" mx="10" textAlign="center">
+                        <Box mt="2" mx="10">
                             <Stack space={1} >
-                                <Text fontSize="lg">
+                                <Text fontSize="lg" textAlign={'center'}>
                                     Explore stange places on Mars and experience the great time in your life time
                                 </Text>
                                 <Flex mt={{
                                     base: "-2",
                                     sm: "2",
                                 }}
-                                    direction="row" alignItems="center"
+                                textAlign={{
+                                    base: undefined,
+                                    sm: "center"
+                                }}
+                                    direction="row"
+                                    alignItems="center"
                                     flexWrap={{
                                         base: "wrap",
-                                        sm: undefined,
+                                        sm: "wrap",
                                     }}
-                                    justifyContent="center">
-                                    <Stack mx={{
-                                        base: 2,
-                                        sm: undefined
-                                    }}
+                                    justifyContent="space-between"
+                                    >
+                                    <Stack
+                                        w={{
+                                            base: '60%',
+                                            sm: '50%',
+                                            md: undefined
+                                        }}
                                         mt={{
                                             base: 4,
-                                            sm: undefined
+                                            sm: 4,
+                                            md: undefined
                                         }}
                                         space={0.5}>
                                         <Text fontSize="md" fontWeight="bold">$10000-20000</Text>
                                         <Text>Per month</Text>
                                     </Stack>
-                                    <Divider display={{ base: 'none', sm: undefined }} h="6" alignSelf="center" thickness="2" mx={{
-                                        base: "2",
-                                        sm: "4",
-                                        md: "10",
-                                        lg: "10",
-                                        xl: "10",
-                                    }} orientation="vertical" />
-                                    <Stack mx={{
-                                        base: 2,
-                                        sm: undefined
-                                    }}
-                                        mt={{
-                                            base: 4,
-                                            sm: undefined
-                                        }}
-                                        space={0}>
-                                        <Text fontSize="md" fontWeight="bold">250+</Text>
-                                        <Text>Employees</Text>
-                                        <Text fontSize="xs">at this department</Text>
-                                    </Stack>
-                                    <Divider display={{ base: 'none', sm: undefined }} h="6" alignSelf="center" thickness="2" mx={{
-                                        base: "2",
-                                        sm: "4",
-                                        md: "10",
-                                        lg: "10",
-                                        xl: "10",
-                                    }} orientation="vertical" />
-                                    <Stack mx={{
-                                        base: 2,
-                                        sm: undefined
-                                    }}
-                                        mt={{
-                                            base: 4,
-                                            sm: undefined
-                                        }}
-                                        space={0.5}>
-                                        <Text fontSize="md" fontWeight="bold">Amsterdam</Text>
-                                        <Text>Location</Text>
-                                    </Stack>
-                                    <Divider display={{ base: 'none', sm: undefined }} h="6" alignSelf="center" thickness="2" mx={{
+                                    <Divider display={{ base: 'none', sm: 'none', md: undefined }} h="6" alignSelf="center" thickness="2" mx={{
                                         base: "2",
                                         sm: "4",
                                         md: "10",
@@ -109,13 +89,61 @@ export default function CompaniesList() {
                                         xl: "10",
                                     }} orientation="vertical" />
                                     <Stack
-                                        mx={{
-                                            base: 2,
-                                            sm: undefined
+                                        w={{
+                                            base: '40%',
+                                            sm: '50%',
+                                            md: undefined
                                         }}
                                         mt={{
                                             base: 4,
-                                            sm: undefined
+                                            sm: 4,
+                                            md: undefined
+                                        }}
+                                        space={0.5}>
+                                        <Text fontSize="md" fontWeight="bold">250+</Text>
+                                        <Text>Employees</Text>
+                                        <Text fontSize="xs">at this department</Text>
+                                    </Stack>
+                                    <Divider display={{ base: 'none', sm: 'none', md: undefined }} h="6" alignSelf="center" thickness="2" mx={{
+                                        base: "2",
+                                        sm: "4",
+                                        md: "10",
+                                        lg: "10",
+                                        xl: "10",
+                                    }} orientation="vertical" />
+                                    <Stack
+                                        w={{
+                                            base: '60%',
+                                            sm: '50%',
+                                            md: undefined
+                                        }}
+                                        mt={{
+                                            base: 4,
+                                            sm: 4,
+                                            md: undefined
+                                        }}
+                                        space={0.5}>
+                                        <Text fontSize="md" fontWeight="bold">Amsterdam</Text>
+                                        <Text>Location</Text>
+                                    </Stack>
+                                    <Divider display={{ base: 'none', sm: 'none', md: undefined }} h="6" alignSelf="center" thickness="2" mx={{
+                                        base: "2",
+                                        sm: "4",
+                                        md: "10",
+                                        lg: "10",
+                                        xl: "10",
+                                    }} orientation="vertical" />
+                                    <Stack
+                                        w={{
+                                            base: '40%',
+                                            sm: '50%',
+                                            md: undefined
+                                        }}
+                                        alignContent={'flex-end'}
+                                        mt={{
+                                            base: 4,
+                                            sm: 4,
+                                            md: undefined
                                         }}
                                         space={0.5}>
                                         <Text fontSize="md" fontWeight="bold">In house</Text>
@@ -124,7 +152,7 @@ export default function CompaniesList() {
                                 </Flex>
                             </Stack>
                             <Divider mt="2" thickness="1" orientation="horizontal" />
-                            <Stack mb={{base: 2, sm: undefined}} direction={{ base: "column", sm: "column", md: "row" }}>
+                            <Stack mb={{ base: 2, sm: undefined }} direction={{ base: "column", sm: "column", md: "row" }}>
                                 <Flex w={"100%"} direction="row" flexWrap={'wrap'}>
                                     <Button mr={{ base: 1, sm: 2 }} mt={{ base: 1, sm: 2 }} rounded="full" disabled backgroundColor="violet.500">React</Button>
                                     <Button mr={{ base: 1, sm: 2 }} mt={{ base: 1, sm: 2 }} rounded="full" size={"sm"} disabled backgroundColor="violet.500">Typescript</Button>
@@ -147,7 +175,7 @@ export default function CompaniesList() {
                                         name: "areachart",
                                         color: "coolGray.500",
                                     }} />
-                                    <Button w="40px" backgroundColor="white" disabled shadow={3} _text={{ color: "coolGray.500" }}>+2</Button>
+                                    <Button w="50px" backgroundColor="white" disabled shadow={3} _text={{ color: "coolGray.500" }}>+2</Button>
                                 </Stack>
                             </Stack>
                         </Box>
