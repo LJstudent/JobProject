@@ -26,14 +26,7 @@ export default function CompaniesList() {
                                 base: '140px',
                                 sm: undefined,
                             }}
-                            _web={{
-                                ml:
-                                {
-                                    base: 24,
-                                    sm: undefined,
-                                }
-                            }}
-                            textAlign="center">
+                            textAlign={{base: undefined, sm: "center"}}>
                             <Heading size="xl">
                                 MARS
                             </Heading>
@@ -45,9 +38,9 @@ export default function CompaniesList() {
                                 Front-end developer
                             </Text>
                         </Stack>
-                        <Box mt="2" mx="10">
+                        <Box mt="2" mx={{base: 6, sm: 8, md: 10}}>
                             <Stack space={1} >
-                                <Text fontSize="lg" textAlign={'center'}>
+                                <Text fontSize="lg" textAlign={{base: undefined, sm: 'center'}}>
                                     Explore stange places on Mars and experience the great time in your life time
                                 </Text>
                                 <Flex mt={{
@@ -74,7 +67,7 @@ export default function CompaniesList() {
                                         }}
                                         mt={{
                                             base: 4,
-                                            sm: 4,
+                                            sm: undefined,
                                             md: undefined
                                         }}
                                         space={0.5}>
@@ -96,7 +89,7 @@ export default function CompaniesList() {
                                         }}
                                         mt={{
                                             base: 4,
-                                            sm: 4,
+                                            sm: undefined,
                                             md: undefined
                                         }}
                                         space={0.5}>
@@ -119,7 +112,7 @@ export default function CompaniesList() {
                                         }}
                                         mt={{
                                             base: 4,
-                                            sm: 4,
+                                            sm: 2,
                                             md: undefined
                                         }}
                                         space={0.5}>
@@ -142,7 +135,7 @@ export default function CompaniesList() {
                                         alignContent={'flex-end'}
                                         mt={{
                                             base: 4,
-                                            sm: 4,
+                                            sm: 2,
                                             md: undefined
                                         }}
                                         space={0.5}>
