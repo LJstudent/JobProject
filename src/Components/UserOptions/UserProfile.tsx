@@ -1,5 +1,5 @@
 import { AntDesign, Feather } from '@expo/vector-icons';
-import { Chip } from '@rneui/themed';
+import { Avatar, Chip } from '@rneui/themed';
 import { Box, Button, Checkbox, Divider, Flex, FormControl, Heading, Icon, IconButton, Input, ScrollView, Stack, Text, TextArea } from 'native-base';
 import React from 'react';
 import { Dimensions } from 'react-native';
@@ -51,6 +51,25 @@ export default function UserProfile() {
                 <Heading size="md" mb={2}>
                     General info
                 </Heading>
+                <Box mt={3} mb={3} pl={6} pr={2} pb={6} pt={2} rounded="xl" borderColor="coolGray.200" borderWidth="1" shadow={1} width={'50%'} maxW={'200px'} backgroundColor={'white'}>
+                    <Stack justifyContent={'flex-end'} direction={'row'}>
+                        <IconButton variant="ghost" _icon={{
+                            as: Feather,
+                            name: "edit",
+                            color: 'black'
+                        }} />
+                        <IconButton variant="ghost" _icon={{
+                            as: AntDesign,
+                            name: "delete",
+                            color: 'black'
+                        }} />
+                    </Stack>
+                    <Avatar
+                        size={'large'}
+                        rounded
+                        source={{ uri: "https://randomuser.me/api/portraits/men/36.jpg" }}
+                    />
+                </Box>
                 <FormControl>
                     <FormControl.Label>Your name</FormControl.Label>
                     <Input defaultValue='Leon' />
@@ -83,7 +102,7 @@ export default function UserProfile() {
                     }} />
                 </Stack>
                 <Box mt={3} mb={5} px={6} pb={6} pt={2} rounded="3xl" borderColor="coolGray.200" borderWidth="1" shadow={3} width={'100%'} backgroundColor={'white'}>
-                    <Stack justifyContent={'end'} direction={'row'}>
+                    <Stack justifyContent={'flex-end'} direction={'row'}>
                         <IconButton variant="ghost" _icon={{
                             as: Feather,
                             name: "edit",
@@ -173,7 +192,7 @@ export default function UserProfile() {
                     }} />
                 </Stack>
                 <Box mt={3} mb={5} px={6} pb={6} pt={2} rounded="3xl" borderColor="coolGray.200" borderWidth="1" shadow={3} width={'100%'} backgroundColor={'white'}>
-                    <Stack justifyContent={'end'} direction={'row'}>
+                    <Stack justifyContent={'flex-end'} direction={'row'}>
                         <IconButton variant="ghost" _icon={{
                             as: Feather,
                             name: "edit",
