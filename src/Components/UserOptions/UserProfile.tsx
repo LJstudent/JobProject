@@ -1,6 +1,6 @@
 import { AntDesign, Feather } from '@expo/vector-icons';
 import { Avatar, Chip } from '@rneui/themed';
-import { Box, Button, Checkbox, Divider, Flex, FormControl, Heading, Icon, IconButton, Input, ScrollView, Stack, Text, TextArea } from 'native-base';
+import { Box, Button, Checkbox, Divider, Flex, FormControl, Heading, Icon, IconButton, Input, ScrollView, Stack, Text } from 'native-base';
 import React from 'react';
 import { Dimensions } from 'react-native';
 
