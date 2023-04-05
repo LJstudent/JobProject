@@ -7,7 +7,7 @@ export default function CompaniesList() {
         <Stack direction={"column"}>
             <Center>
                 <Box my="10" w={{
-                    base: "95%",
+                    base: "90%",
                     sm: "80%",
                     md: "800px",
                     lg: "800px",
