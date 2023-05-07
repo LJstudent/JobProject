@@ -1,8 +1,15 @@
 import { AntDesign, MaterialIcons } from "@expo/vector-icons";
+import { CompaniesList } from "Types/CompaniesList.Types";
 import { Box, Button, Divider, Flex, Heading, IconButton, Stack, Text } from "native-base";
 import * as React from 'react';
 
-export default function Company() {
+interface IOuterProps {
+    companyJobOffer: CompaniesList;
+};
+
+export default function Company(props: IOuterProps) {
+    const {companyName, jobTitle, titleText, city, typeProject , minEmployees, maxEmployees} = props.companyJobOffer;
+
     return (
         <Box mt="10" w={{
             base: "90%",
@@ -26,20 +33,20 @@ export default function Company() {
                     }}
                     textAlign={{ base: undefined, sm: "center" }}>
                     <Heading size="xl">
-                        MARS
+                        {companyName}
                     </Heading>
                     <Text fontSize="lg" _light={{
                         color: "violet.500"
                     }} _dark={{
                         color: "violet.400"
                     }} fontWeight="500">
-                        Front-end developer
+                        {jobTitle}
                     </Text>
                 </Stack>
                 <Box mt="2" mx={{ base: 6, sm: 8, md: 10 }}>
                     <Stack space={1} >
                         <Text fontSize="lg" textAlign={{ base: undefined, sm: 'center' }}>
-                            Explore stange places on Mars and experience the great time in your life time
+                           {titleText}
                         </Text>
                         <Flex mt={{
                             base: "-2",
@@ -91,7 +98,7 @@ export default function Company() {
                                     md: undefined
                                 }}
                                 space={0.5}>
-                                <Text fontSize="md" fontWeight="bold">250+</Text>
+                                <Text fontSize="md" fontWeight="bold">{minEmployees >= 250 ? '250+' : `${minEmployees}-${maxEmployees}`}</Text>
                                 <Text>Employees</Text>
                                 <Text fontSize="xs">at this department</Text>
                             </Stack>
@@ -114,7 +121,7 @@ export default function Company() {
                                     md: undefined
                                 }}
                                 space={0.5}>
-                                <Text fontSize="md" fontWeight="bold">Amsterdam</Text>
+                                <Text fontSize="md" fontWeight="bold">{city}</Text>
                                 <Text>Location</Text>
                             </Stack>
                             <Divider display={{ base: 'none', sm: 'none', md: undefined }} h="6" alignSelf="center" thickness="2" mx={{
@@ -137,7 +144,7 @@ export default function Company() {
                                     md: undefined
                                 }}
                                 space={0.5}>
-                                <Text fontSize="md" fontWeight="bold">In house</Text>
+                                <Text fontSize="md" fontWeight="bold">{typeProject}</Text>
                                 <Text>Project</Text>
                             </Stack>
                         </Flex>

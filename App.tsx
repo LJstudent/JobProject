@@ -6,6 +6,8 @@ import 'react-native-gesture-handler';
 import UserOptions from './src/Components/UserOptions/UserOptions';
 import Main from './src/Main';
 import { RootStackParamList } from './src/Components/Navigation/RootStackParamList'
+import { Provider } from 'react-redux';
+import { store } from './src/State/store'
 
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -22,6 +24,7 @@ export default function App() {
   });
 
   return (
+    <Provider store={store}>
     <NativeBaseProvider theme={theme}>
       <NavigationContainer>
         <Stack.Navigator
@@ -42,5 +45,6 @@ export default function App() {
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider >
+    </Provider>
   );
 }
