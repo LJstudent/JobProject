@@ -1,6 +1,7 @@
 import { CompaniesList } from "Types/CompaniesList.Types";
+import { CompanyJobOfferRequest } from "Types/CompanyJobOfferRequest.Types";
 
-export function JobOfferResolver(response: any): CompaniesList[] {
+export function JobOfferResolver(response: CompanyJobOfferRequest[]): CompaniesList[] {
     const result: CompaniesList[] = [];
 
     for (let i = 0; i < response.length; i++) {

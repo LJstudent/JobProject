@@ -2,6 +2,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { JobOfferResolver } from '../State/resolvers/JobOfferResolver'
 import { CompaniesList } from '../Types/CompaniesList.Types'
+import { CompanyJobOfferRequest } from '../Types/CompanyJobOfferRequest.Types'
 
 // Define a service using a base URL and expected endpoints
 export const jobProjectApi = createApi({
@@ -10,7 +11,7 @@ export const jobProjectApi = createApi({
   endpoints: (builder) => ({
     getJobOffers: builder.query<CompaniesList[], void>({
       query: () => `/job-offers`,
-      transformResponse(response: []) {
+      transformResponse(response: CompanyJobOfferRequest[]) {
         return JobOfferResolver(response)
       },
     }),
