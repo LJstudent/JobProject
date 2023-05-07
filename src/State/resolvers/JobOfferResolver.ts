@@ -10,7 +10,7 @@ export function JobOfferResolver(response: any): CompaniesList[] {
            createdDate: response[i].createdDate,
            companyName: response[i].company.companyName,
            jobTitle: response[i].jobFunction.jobTitle,
-           currencyCode: response[i].currency.code,
+           currencyCode: response[i].currency.id,
            minEmployees: response[i].employees.minEmployees,
            maxEmployees: response[i].employees.maxEmployees,
            country: response[i].location.country.name,
@@ -23,6 +23,6 @@ export function JobOfferResolver(response: any): CompaniesList[] {
         result.push(companyJobOffer)
     }
 
-    
+
     return result
 }

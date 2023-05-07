@@ -2,13 +2,14 @@ import { AntDesign, MaterialIcons } from "@expo/vector-icons";
 import { CompaniesList } from "Types/CompaniesList.Types";
 import { Box, Button, Divider, Flex, Heading, IconButton, Stack, Text } from "native-base";
 import * as React from 'react';
+import { CurrencySalaryPerMonth } from "./CurrencySalaryPerMonth";
 
 interface IOuterProps {
     companyJobOffer: CompaniesList;
 };
 
 export default function Company(props: IOuterProps) {
-    const {companyName, jobTitle, titleText, city, typeProject , minEmployees, maxEmployees} = props.companyJobOffer;
+    const {companyName, jobTitle, titleText, city, typeProject , minEmployees, maxEmployees, currencyCode, minSalaryPerMonth, maxSalaryPerMonth} = props.companyJobOffer;
 
     return (
         <Box mt="10" w={{
@@ -76,7 +77,7 @@ export default function Company(props: IOuterProps) {
                                     md: undefined
                                 }}
                                 space={0.5}>
-                                <Text fontSize="md" fontWeight="bold">$10000-20000</Text>
+                                <Text fontSize="md" fontWeight="bold">{`${CurrencySalaryPerMonth(currencyCode)} ${minSalaryPerMonth}-${maxSalaryPerMonth}`}</Text>
                                 <Text>Per month</Text>
                             </Stack>
                             <Divider display={{ base: 'none', sm: 'none', md: undefined }} h="6" alignSelf="center" thickness="2" mx={{
