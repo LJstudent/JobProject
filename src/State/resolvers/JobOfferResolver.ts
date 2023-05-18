@@ -18,7 +18,8 @@ export function JobOfferResolver(response: CompanyJobOfferRequest[]): CompaniesL
            city: response[i].location.city.name,
            typeProject: response[i].project.typeProject,
            minSalaryPerMonth: response[i].salaryPerMonth.minAmount,
-           maxSalaryPerMonth: response[i].salaryPerMonth.maxAmount
+           maxSalaryPerMonth: response[i].salaryPerMonth.maxAmount,
+           codeStack: response[i].codeStack,
         }
 
         result.push(companyJobOffer)

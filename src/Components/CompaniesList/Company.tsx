@@ -3,13 +3,14 @@ import { CompaniesList } from "Types/CompaniesList.Types";
 import { Box, Button, Divider, Flex, Heading, IconButton, Stack, Text } from "native-base";
 import * as React from 'react';
 import { CurrencySalaryPerMonth } from "./CurrencySalaryPerMonth";
+import CodeStacks from "./CodeStacks";
 
 interface IOuterProps {
     companyJobOffer: CompaniesList;
 };
 
 export default function Company(props: IOuterProps) {
-    const {companyName, jobTitle, titleText, city, typeProject , minEmployees, maxEmployees, currencyCode, minSalaryPerMonth, maxSalaryPerMonth} = props.companyJobOffer;
+    const {companyName, jobTitle, titleText, city, typeProject , minEmployees, maxEmployees, currencyCode, minSalaryPerMonth, maxSalaryPerMonth, codeStack} = props.companyJobOffer;
 
     return (
         <Box mt="10" w={{
@@ -152,12 +153,7 @@ export default function Company(props: IOuterProps) {
                     </Stack>
                     <Divider mt="2" thickness="1" orientation="horizontal" />
                     <Stack mb={{ base: 2, sm: undefined }} direction={{ base: "column", sm: "column", md: "row" }}>
-                        <Flex w={"100%"} direction="row" flexWrap={'wrap'}>
-                            <Button mr={{ base: 1, sm: 2 }} mt={{ base: 1, sm: 2 }} rounded="full" disabled backgroundColor="violet.500">React</Button>
-                            <Button mr={{ base: 1, sm: 2 }} mt={{ base: 1, sm: 2 }} rounded="full" size={"sm"} disabled backgroundColor="violet.500">Typescript</Button>
-                            <Button mr={{ base: 1, sm: 2 }} mt={{ base: 1, sm: 2 }} rounded="full" disabled backgroundColor="violet.500">Redux</Button>
-                            <Button mr={{ base: 1, sm: 2 }} mt={{ base: 1, sm: 2 }} rounded="full" disabled backgroundColor="violet.500">+6</Button>
-                        </Flex>
+                        <CodeStacks codeStacks={codeStack} />
                         <Stack direction="row" space={1} mt={2} flex="1" justifyContent={{ base: undefined, sm: undefined, md: "flex-end" }}>
                             <IconButton disabled backgroundColor="white" variant="solid" shadow={3} _icon={{
                                 as: AntDesign,

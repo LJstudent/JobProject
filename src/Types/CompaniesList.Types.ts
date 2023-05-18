@@ -1,3 +1,4 @@
+import { CodeStack } from "./CodeStack.Types";
 import { Currency } from "./enums/Currency.Enum";
 
 export interface CompaniesList {
@@ -14,4 +15,5 @@ export interface CompaniesList {
     typeProject: string;
     minSalaryPerMonth: number;
     maxSalaryPerMonth: number;
+    codeStack: CodeStack[];
 }

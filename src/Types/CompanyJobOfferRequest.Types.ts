@@ -43,4 +43,8 @@ export interface CompanyJobOfferRequest {
       minAmount: number;
       maxAmount: number;
     };
+      codeStack: {
+        id: number;
+        codeName: string;
+      }[];
   }
