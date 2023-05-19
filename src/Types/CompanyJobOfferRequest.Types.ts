@@ -47,4 +47,8 @@ export interface CompanyJobOfferRequest {
         id: number;
         codeName: string;
       }[];
+      jobPerk: {
+        id: number;
+        perkName: string;
+      }[];
   }

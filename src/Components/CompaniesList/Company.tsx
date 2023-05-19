@@ -1,16 +1,16 @@
-import { AntDesign, MaterialIcons } from "@expo/vector-icons";
 import { CompaniesList } from "Types/CompaniesList.Types";
-import { Box, Button, Divider, Flex, Heading, IconButton, Stack, Text } from "native-base";
+import { Box, Divider, Flex, Heading, Stack, Text } from "native-base";
 import * as React from 'react';
-import { CurrencySalaryPerMonth } from "./CurrencySalaryPerMonth";
 import CodeStacks from "./CodeStacks";
+import { CurrencySalaryPerMonth } from "./CurrencySalaryPerMonth";
+import JobPerks from "./JobPerks";
 
 interface IOuterProps {
     companyJobOffer: CompaniesList;
 };
 
 export default function Company(props: IOuterProps) {
-    const {companyName, jobTitle, titleText, city, typeProject , minEmployees, maxEmployees, currencyCode, minSalaryPerMonth, maxSalaryPerMonth, codeStack} = props.companyJobOffer;
+    const { companyName, jobTitle, titleText, city, typeProject, minEmployees, maxEmployees, currencyCode, minSalaryPerMonth, maxSalaryPerMonth, codeStack, jobPerk } = props.companyJobOffer;
 
     return (
         <Box mt="10" w={{
@@ -48,7 +48,7 @@ export default function Company(props: IOuterProps) {
                 <Box mt="2" mx={{ base: 6, sm: 8, md: 10 }}>
                     <Stack space={1} >
                         <Text fontSize="lg" textAlign={{ base: undefined, sm: 'center' }}>
-                           {titleText}
+                            {titleText}
                         </Text>
                         <Flex mt={{
                             base: "-2",
@@ -154,24 +154,7 @@ export default function Company(props: IOuterProps) {
                     <Divider mt="2" thickness="1" orientation="horizontal" />
                     <Stack mb={{ base: 2, sm: undefined }} direction={{ base: "column", sm: "column", md: "row" }}>
                         <CodeStacks codeStacks={codeStack} />
-                        <Stack direction="row" space={1} mt={2} flex="1" justifyContent={{ base: undefined, sm: undefined, md: "flex-end" }}>
-                            <IconButton disabled backgroundColor="white" variant="solid" shadow={3} _icon={{
-                                as: AntDesign,
-                                name: "car",
-                                color: "coolGray.500"
-                            }} />
-                            <IconButton disabled backgroundColor="white" variant="solid" shadow={3} _icon={{
-                                as: MaterialIcons,
-                                name: "fitness-center",
-                                color: "coolGray.500"
-                            }} />
-                            <IconButton disabled backgroundColor="white" variant="solid" shadow={3} _icon={{
-                                as: AntDesign,
-                                name: "areachart",
-                                color: "coolGray.500",
-                            }} />
-                            <Button w="50px" backgroundColor="white" disabled shadow={3} _text={{ color: "coolGray.500" }}>+2</Button>
-                        </Stack>
+                        <JobPerks jobPerks={jobPerk} />
                     </Stack>
                 </Box>
             </Box>

@@ -1,4 +1,5 @@
 import { CodeStack } from "./CodeStack.Types";
+import { JobPerk } from "./JobPerk.Types";
 import { Currency } from "./enums/Currency.Enum";
 
 export interface CompaniesList {
@@ -16,4 +17,5 @@ export interface CompaniesList {
     minSalaryPerMonth: number;
     maxSalaryPerMonth: number;
     codeStack: CodeStack[];
+    jobPerk: JobPerk[];
 }

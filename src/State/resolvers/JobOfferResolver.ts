@@ -20,6 +20,7 @@ export function JobOfferResolver(response: CompanyJobOfferRequest[]): CompaniesL
            minSalaryPerMonth: response[i].salaryPerMonth.minAmount,
            maxSalaryPerMonth: response[i].salaryPerMonth.maxAmount,
            codeStack: response[i].codeStack,
+           jobPerk: response[i].jobPerk
         }
 
         result.push(companyJobOffer)
