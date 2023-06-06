@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { jobProjectApi } from '../Services/CompaniesList.services'
+import companyReducer from './slices/company/companySlice';
 
 export const store = configureStore({
   reducer: {
+    selectedCompany: companyReducer,
     // Add the generated reducer as a specific top-level slice
     [jobProjectApi.reducerPath]: jobProjectApi.reducer,
   },
