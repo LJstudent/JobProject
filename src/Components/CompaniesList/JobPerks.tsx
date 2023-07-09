@@ -78,7 +78,7 @@ export default function JobPerks(props: IOuterProps) {
             {jobPerks.map((jobPerk, index) => {
                 if (index < 3) {
                     return (
-                        <IconButton disabled backgroundColor="white" variant="solid" shadow={3} _icon={JobPerkFunction(jobPerk.id)} />
+                        <IconButton key={index} disabled backgroundColor="white" variant="solid" shadow={3} _icon={JobPerkFunction(jobPerk.id)} />
                     )
                 } else {
                     return null;

@@ -7,6 +7,7 @@ export interface CompaniesList {
     titleText: string;
     createdDate: Date;
     companyName: string;
+    companyId: number;
     jobTitle: string;
     currencyCode: Currency;
     minEmployees: number;

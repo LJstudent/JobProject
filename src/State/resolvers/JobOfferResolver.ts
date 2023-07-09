@@ -10,6 +10,7 @@ export function JobOfferResolver(response: CompanyJobOfferRequest[]): CompaniesL
            titleText: response[i].titleText,
            createdDate: response[i].createdDate,
            companyName: response[i].company.companyName,
+           companyId: response[i].company.id,
            jobTitle: response[i].jobFunction.jobTitle,
            currencyCode: response[i].currency.id,
            minEmployees: response[i].employees.minEmployees,
